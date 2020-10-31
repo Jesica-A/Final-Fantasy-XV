@@ -1,0 +1,91 @@
+/*GENERAL*/
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&family=Old+Standard+TT:wght@700&display=swap");
+
+html {
+  scroll-behavior: smooth;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+body {
+  color: white;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+a:hover,
+.c1 {
+  color: rgb(0, 183, 255);
+}
+
+ul li {
+  list-style: none;
+}
+
+h1 {
+  font-family: "Old Standard TT", serif;
+  font-size: 45px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: underline white;
+  letter-spacing: 0.3rem;
+  -webkit-text-stroke: 0.5px rgb(0, 0, 0);
+  /*ESTO ESTÁ EN PROCESO, LAS LETRAS ORIGINALES SE PUEDEN VER EN LA CARPETA "img" imagen "letras.png"
+  
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.534);
+  background: linear-gradient(
+    0deg,
+    rgba(122, 122, 122, 1) 46%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;*/
+}
+
+h2:not(.cont) {
+  font-size: 1.9rem;
+  text-align: center;
+  border-bottom: 1px solid;
+}
+
+h3 {
+  font-size: 1.5rem;
+  text-align: center;
+}
+p {
+  line-height: 30px;
+  text-align: justify;
+  text-indent: 10px;
+}
+
+/*Fondo solo para index*/
+.index {
+  background: url(../img/fondoindex.png) no-repeat center center;
+  background-size: cover;
+}
+
+/*Fondo para las demas secciones*/
+.back {
+  background-image: url(../img/fav3.jpg);
+}
+
+/*Contenido de la pagina*/
+nav,
+footer {
+  background-color: rgba(0, 0, 0, 0.774);
+  font-weight: bold;
+}
+
+section.modal {
+  /*Esta seccion despues va a estar a la izquierda*/
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+footer p {
+  text-align: center;
+}
+footer span {
+  font-weight: normal;
+}
