@@ -1,12 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-      src="https://kit.fontawesome.com/20cfbc7c59.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
     <link rel="stylesheet" href="css/styles.css" />
     <title>Final Fantasy XV</title>
   </head>
@@ -14,10 +11,10 @@
   <body class="index">
     <header>
       <nav>
-        <ul>
-          <li><img src="logoffxv.png" alt="Logo-de-FFXV" /></li>
-          <!--No tengo esta imagen, el nombre es inventado-->
-          <li><a href="index.html">Home</a></li>
+        <a href="index.html"
+          ><img class="logo" src="img/ffxvlogo.png" alt="Logo-de-FFXV"
+        /></a>
+        <ul class="menu">
           <li><a href="about.html">About</a></li>
           <li><a href="game.html">Game</a></li>
           <li><a href="media.html">Media</a></li>
@@ -29,44 +26,83 @@
     <main>
       <h1 class="c2">Final Fantasy XV</h1>
       <section class="modal">
-        <h2 class="cont">Ready for the battle?</h2>
+        <h2>Reclama tu trono</h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore
-          repellat, ipsam sapiente repellendus libero quod! Autem, ut saepe
-          ratione in nihil possimus accusamus exercitationem earum sapiente
-          ipsam fugit eum iusto.
+          "Fans de toda la vida y no iniciados, estáis destinados a vivir un
+          Final Fantasy totalmente nuevo."
         </p>
-        <a
-          href="https://finalfantasyxv.square-enix-games.com/es"
-          target="_blank"
-          >Read More</a
-        >
+        <ul>
+          <li>
+            <span
+              class="iconify"
+              data-icon="ion:game-controller"
+              data-inline="false"
+            ></span
+            >Mejor Juego PS4 2016
+          </li>
+          <li>
+            <span
+              class="iconify"
+              data-icon="gridicons:trophy"
+              data-inline="false"
+            ></span
+            >5 Premios
+          </li>
+          <li>
+            <span
+              class="iconify"
+              data-icon="fa-solid:award"
+              data-inline="false"
+            ></span
+            >8 Nominaciones
+          </li>
+        </ul>
       </section>
     </main>
 
-    <section>
+    <section class="sm">
       <ul>
-        <li>Follow Final Fantasy XV:</li>
+        <li>Sigue a Final Fantasy XV:</li>
         <li>
           <a href="https://www.facebook.com/ffxv/" target="_blank"
-            ><i class="fa fa-facebook p-1"></i
+            ><span
+              class="iconify"
+              data-icon="entypo-social:facebook-with-circle"
+              data-inline="false"
+              id="facebook"
+            ></span
           ></a>
         </li>
         <li>
           <a href="https://www.instagram.com/ffxv/" target="_blank"
-            ><i class="fab fa-instagram"></i
+            ><span
+              class="iconify"
+              data-icon="entypo-social:instagram-with-circle"
+              data-inline="false"
+              id="instagram"
+            ></span
           ></a>
         </li>
         <li>
           <a
             href="https://www.youtube.com/channel/UCQSuIHSbDFH6Enz3AXeUHaA"
             target="_blank"
-            ><i class="fab fa-youtube"></i
+            ><span
+              class="iconify"
+              data-icon="entypo-social:youtube-with-circle"
+              data-inline="false"
+              id="youtube"
+            ></span
           ></a>
         </li>
         <li>
           <a href="https://twitter.com/ffxven?lang=es" target="_blank"
-            ><i class="fa fa-twitter p-1"></i
+            ><span
+              class="iconify"
+              data-icon="ant-design:twitter-circle-filled"
+              data-inline="false"
+              id="twitter"
+            ></span
           ></a>
         </li>
       </ul>

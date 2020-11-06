@@ -1,91 +1,220 @@
-/*GENERAL*/
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&family=Old+Standard+TT:wght@700&display=swap");
+/*---------------------------------GENERAL---------------------------------*/
+@import url("https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@400;700&family=Poppins:wght@200;300;400;600;700&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
 
 html {
   scroll-behavior: smooth;
-  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
-  color: white;
+  color: #ffffff;
 }
 
+/*links*/
 a {
-  color: white;
+  color: #ffffff;
   text-decoration: none;
 }
-a:hover,
-.c1 {
+nav a:hover,
+ol li a:hover {
   color: rgb(0, 183, 255);
 }
 
+/*listas*/
 ul li {
   list-style: none;
 }
 
-h1 {
-  font-family: "Old Standard TT", serif;
-  font-size: 45px;
-  font-weight: 700;
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration: underline white;
-  letter-spacing: 0.3rem;
-  -webkit-text-stroke: 0.5px rgb(0, 0, 0);
-  /*ESTO ESTÁ EN PROCESO, LAS LETRAS ORIGINALES SE PUEDEN VER EN LA CARPETA "img" imagen "letras.png"
-  
-  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.534);
-  background: linear-gradient(
-    0deg,
-    rgba(122, 122, 122, 1) 46%,
-    rgba(0, 0, 0, 1) 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;*/
+ol li {
+  font-size: 1.2em;
+  padding: 0.2em;
+  margin-left: 1.5em;
 }
 
-h2:not(.cont) {
-  font-size: 1.9rem;
-  text-align: center;
-  border-bottom: 1px solid;
-}
-
+/*textos*/
 h3 {
   font-size: 1.5rem;
   text-align: center;
 }
+
 p {
-  line-height: 30px;
+  line-height: 2em;
   text-align: justify;
-  text-indent: 10px;
+  text-indent: 0.8em;
 }
 
-/*Fondo solo para index*/
-.index {
-  background: url(../img/fondoindex.png) no-repeat center center;
-  background-size: cover;
+.c1 {
+  font-family: "Old Standard TT", serif;
+  font-size: 2.5em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgb(240, 239, 245);
+  padding-bottom: 0.2em;
+  border-bottom: 2px solid;
+  text-align: center;
 }
 
-/*Fondo para las demas secciones*/
-.back {
-  background-image: url(../img/fav3.jpg);
+section {
+  padding: 5em;
 }
 
-/*Contenido de la pagina*/
-nav,
-footer {
-  background-color: rgba(0, 0, 0, 0.774);
+.text {
+  margin: 2em;
+}
+/*flotacion*/
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+/*iconos, imagenes*/
+.iconify {
+  font-size: 1.8em;
+}
+
+section img {
+  margin: 2em 0.9em 0em 0.9em;
+}
+/*barra de navegacion*/
+nav {
+  background-color: rgba(0, 0, 0, 0.904);
+  font-family: "Old Standard TT", serif;
+  text-transform: uppercase;
   font-weight: bold;
+  padding: 0em 1.2em;
+}
+.menu {
+  margin-left: 50em; /*no encontre otra forma de acomodarlos a la derecha de la pantalla*/
+  display: inline;
 }
 
-section.modal {
-  /*Esta seccion despues va a estar a la izquierda*/
-  background-color: rgba(0, 0, 0, 0.5);
+nav li {
+  display: inline-block;
+  font-size: 1.2em;
+  padding-left: 1em;
+}
+.logo {
+  display: inline;
+  opacity: 0.5;
+}
+.logo:hover {
+  opacity: 1;
 }
 
+/*footer*/
+footer {
+  background-color: rgba(0, 0, 0, 0.904);
+  padding: 0.2em;
+}
 footer p {
   text-align: center;
 }
 footer span {
   font-weight: normal;
 }
+
+/*Fondo para las secciones*/
+.back {
+  background-image: url(../img/fav3.jpg);
+}
+.cont {
+  background: url(../img/contenido.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+/*---------------------------------------INDEX---------------------------------------*/
+.index {
+  background: url(../img/fondoindex.png) no-repeat center center;
+  background-size: cover;
+}
+
+h1 {
+  font-family: "Old Standard TT", serif;
+  font-size: 3.5em;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: underline #ffffff;
+  letter-spacing: 0.1em;
+  -webkit-text-stroke: 0.5px rgb(0, 0, 0);
+  margin: 1.1em 1em;
+}
+
+section.modal {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 45%;
+  padding: 1.4em 3em;
+  margin: 2em 0em 0em 3em;
+}
+section.modal h2 {
+  margin-bottom: 0.5em;
+}
+
+.sm {
+  text-align: center;
+  padding: 2.5em 0em 0.5em 0em;
+}
+.sm ul li,
+.modal ul li {
+  display: inline-block;
+  padding: 1em;
+}
+#facebook:hover {
+  color: #3b5998;
+}
+#instagram:hover {
+  color: #e1306c;
+}
+#youtube:hover {
+  color: #ff0000;
+}
+#twitter:hover {
+  color: #1da1f2;
+}
+
+/*---------------------------------------ABOUT---------------------------------------*/
+td {
+  padding: 0.3em 5em 0.3em 0em;
+}
+
+#adj,
+#cri,
+#col {
+  background-color: rgb(15, 15, 19);
+}
+
+#adj .text {
+  width: 68%;
+}
+
+/*---------------------------------------GAME---------------------------------------*/
+
+#his .text,
+#pel .text,
+#cos .text {
+  width: 68%;
+}
+/*---------------------------------------MEDIA---------------------------------------*/
+.mit {
+  width: 43%;
+  margin-top: 0em;
+  height: 70vh;
+}
+
+section.fl {
+  padding-right: 0em;
+}
+
+section.fr {
+  padding-left: 0em;
+}
+
+/*---------------------------------------CONTACT---------------------------------------*/

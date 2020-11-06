@@ -14,10 +14,10 @@
   <body class="back">
     <header>
       <nav>
-        <ul>
-          <li><img src="logoffxv.png" alt="Logo-de-FFXV" /></li>
-          <!--No tengo esta imagen, el nombre es inventado-->
-          <li><a href="index.html">Home</a></li>
+        <a href="index.html"
+          ><img class="logo" src="img/ffxvlogo.png" alt="Logo-de-FFXV"
+        /></a>
+        <ul class="menu">
           <li><a href="about.html">About</a></li>
           <li><a href="game.html">Game</a></li>
           <li><a href="media.html">Media</a></li>
@@ -27,9 +27,9 @@
     </header>
 
     <main>
-      <section>
-        <h2 class="c1 cont">Contenido de página</h2>
-        <ol>
+      <section class="cont">
+        <h2 class="c1">Contenido</h2>
+        <ol class="text">
           <li><a href="#his">Historia</a></li>
           <li><a href="#pel">Pelicula</a></li>
           <li><a href="#cos">Cosmogonia</a></li>
@@ -39,38 +39,54 @@
 
       <section id="his">
         <h2 class="c1">Historia</h2>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum
-          incidunt dicta voluptate mollitia quibusdam aut dolores nobis
-          asperiores id dolore, corrupti ullam iusto dolor exercitationem optio
-          similique tempore reprehenderit ipsum.
-        </p>
         <!--Aca van varias imagenes que se pueden pasar con botones <> -->
-        <img src="img/img1.png" alt="" />
+        <img class="fr" src="img/img1.png" alt="" />
+        <div class="text">
+          <p>
+            En cuestión de días, el Reino de Lucis firmará un armisticio, poniendo fin a un largo y amargo conflicto con Niflheim. Antes de la ceremonia, el príncipe Noctis, heredero del trono de Lucis, parte desde su tierra natal para formalizar su unión con Lady Lunafreya de Tenebrae. Sin embargo el ejército imperial toma la ciudad de Lucis y su cristal sagrado. 
+          </p>
+          <p>
+            De la noche a la mañana, el sueño de la paz se ha desvanecido en un recuerdo lejano. Su mundo se derrumba a su alrededor, Noctis no tiene nada más que su determinación y sus leales compañeros para ayudarlo a superar las pruebas por venir.
+          </p>
+        </div>
+        </div>
       </section>
 
       <section id="pel">
         <h2 class="c1">Pelicula Kingslaive</h2>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum
-          incidunt dicta voluptate mollitia quibusdam aut dolores nobis
-          asperiores id dolore, corrupti ullam iusto dolor exercitationem optio
-          similique tempore reprehenderit ipsum.
-        </p>
         <!--Aca van varias imagenes que se pueden pasar con botones <> -->
-        <img src="img/img1.png" alt="" />
+        <img class="fr" src="img/img1.png" alt="" />
+        <div class="text">
+          <p>
+            Se narran acontecimientos que en Final Fantasy XV aparecen en un segundo plano:
+          <p>
+            Durante la noche de la firma del tratado de paz entre los reinos de Lucis y Niflheim, el emperador de Niflheim (Idola Aldercapt) utiliza el tratado como una excusa para derribar la barrera mágica de Insomnia (capital de Lucis) por lo que su ejército es capaz de tomar el control del cristal de la ciudad.
+          </p>
+          <p>
+            Niflheim arrasa la ciudad de la corona, matando al rey Regis Caelum. El Hijo del rey Regis, Noctis, es declarado muerto, junto con la princesa de Tenebrae, Lunafreya. 
+          </p>
+        </div>
       </section>
 
       <section id="cos">
         <h2 class="c1">Cosmogonia</h2>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum
-          incidunt dicta voluptate mollitia quibusdam aut dolores nobis
-          asperiores id dolore, corrupti ullam iusto dolor exercitationem optio
-          similique tempore reprehenderit ipsum.
-        </p>
         <!--Aca van varias imagenes que se pueden pasar con botones <> -->
-        <img src="img/img1.png" alt="" />
+        <img class="fr" src="img/img1.png" alt="" />
+        <div class="text">
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum
+            incidunt dicta voluptate mollitia quibusdam aut dolores nobis
+            asperiores id dolore, corrupti ullam iusto dolor exercitationem optio
+            similique tempore reprehenderit ipsum. Lorem, ipsum dolor sit amet
+            consectetur adipisicing elit. Facilis sint blanditiis et, ab dolorem,
+            aspernatur sunt molestiae saepe, rem reprehenderit ducimus? Animi,
+            eum. Unde illum fugit incidunt neque amet? Cum! Lorem ipsum dolor sit
+            amet consectetur adipisicing elit. Fuga repellat molestiae in harum
+            excepturi, officia consequuntur quam optio inventore eum facilis
+            temporibus a fugit assumenda nobis eveniet? Consequuntur, consequatur
+            a? 
+          </p>
+        </div>
       </section>
 
       <section id="per">
@@ -78,55 +94,73 @@
         <div>
           <h3>Noctis Lucis Caelum</h3>
           <img src="img/img4.png" alt="" />
-          <p>
+          <p class="text">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum
             incidunt dicta voluptate mollitia quibusdam aut dolores nobis
             asperiores id dolore, corrupti ullam iusto dolor exercitationem
-            optio similique tempore reprehenderit ipsum.
+            optio similique tempore reprehenderit ipsum. Lorem ipsum dolor sit
+            amet consectetur, adipisicing elit. Explicabo laborum sint
+            voluptatibus quod unde repellat magnam. Soluta ad nam earum
+            assumenda? Nesciunt esse modi dicta a dignissimos illo est
+            reiciendis.
           </p>
         </div>
 
         <div>
           <h3>Lunafreya Nox Fleuret</h3>
           <img src="img/img4.png" alt="" />
-          <p>
+          <p class="text">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum
             incidunt dicta voluptate mollitia quibusdam aut dolores nobis
             asperiores id dolore, corrupti ullam iusto dolor exercitationem
-            optio similique tempore reprehenderit ipsum.
+            optio similique tempore reprehenderit ipsum. Lorem ipsum dolor, sit
+            amet consectetur adipisicing elit. Provident maiores tempore, et
+            velit nostrum est quaerat totam commodi saepe debitis quisquam!
+            Aliquam, sequi itaque! Asperiores iure natus quas tempore eaque!
           </p>
         </div>
 
         <div>
           <h3>Gladiolus</h3>
           <img src="img/img4.png" alt="" />
-          <p>
+          <p class="text">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum
             incidunt dicta voluptate mollitia quibusdam aut dolores nobis
             asperiores id dolore, corrupti ullam iusto dolor exercitationem
-            optio similique tempore reprehenderit ipsum.
+            optio similique tempore reprehenderit ipsum. Lorem ipsum dolor sit
+            amet, consectetur adipisicing elit. Architecto ut voluptates quidem
+            consectetur explicabo quisquam ipsum, vero iure reprehenderit
+            impedit. Enim officia quas nemo, ipsam aspernatur fugiat expedita
+            quia consectetur.
           </p>
         </div>
 
         <div>
           <h3>Prompto</h3>
           <img src="img/img4.png" alt="" />
-          <p>
+          <p class="text">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum
             incidunt dicta voluptate mollitia quibusdam aut dolores nobis
             asperiores id dolore, corrupti ullam iusto dolor exercitationem
-            optio similique tempore reprehenderit ipsum.
+            optio similique tempore reprehenderit ipsum. Lorem ipsum dolor sit
+            amet consectetur adipisicing elit. Nulla inventore, pariatur
+            doloremque sunt quo ratione, mollitia fuga facere magnam adipisci
+            ipsam sit perferendis quos minima officia praesentium sint! Id,
+            vitae!
           </p>
         </div>
 
         <div>
           <h3>Ignis</h3>
           <img src="img/img4.png" alt="" />
-          <p>
+          <p class="text">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum
             incidunt dicta voluptate mollitia quibusdam aut dolores nobis
             asperiores id dolore, corrupti ullam iusto dolor exercitationem
-            optio similique tempore reprehenderit ipsum.
+            optio similique tempore reprehenderit ipsum. Lorem ipsum dolor, sit
+            amet consectetur adipisicing elit. Sequi dolore vel et vitae
+            distinctio aperiam quam quas id libero rem vero soluta facilis ut,
+            ad ipsa non natus consectetur dicta?
           </p>
         </div>
       </section>

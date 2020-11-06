@@ -14,10 +14,10 @@
   <body class="back">
     <header>
       <nav>
-        <ul>
-          <li><img src="logoffxv.png" alt="Logo-de-FFXV" /></li>
-          <!--No tengo esta imagen, el nombre es inventado-->
-          <li><a href="index.html">Home</a></li>
+        <a href="index.html"
+          ><img class="logo" src="img/ffxvlogo.png" alt="Logo-de-FFXV"
+        /></a>
+        <ul class="menu">
           <li><a href="about.html">About</a></li>
           <li><a href="game.html">Game</a></li>
           <li><a href="media.html">Media</a></li>
@@ -29,47 +29,50 @@
     <main>
       <section>
         <h2 class="c1">Contáctame</h2>
-        <p>
-          Hola!<br />Si tienes alguna pregunta o si te gustaría colaborar en
-          esta página, envíame un mensaje y te contestaré a la brevedad.
-        </p>
-      </section>
+        <div class="fr mit">
+          <form action="#" method="post">
+            <label for="name">Nombre</label>
+            <input
+              type="text"
+              name="name"
+              placeholder="Ingrese su nombre"
+              id="name"
+              required
+            />
 
-      <section>
-        <form action="#" method="post">
-          <label for="name">Nombre</label>
-          <input
-            type="text"
-            name="name"
-            placeholder="Ingrese su nombre"
-            id="name"
-            required
-          />
+            <label for="email">Email</label>
+            <input
+              type="email"
+              name="email"
+              placeholder="Ingrese su email"
+              id="email"
+              required
+            />
 
-          <label for="email">Email</label>
-          <input
-            type="email"
-            name="email"
-            placeholder="Ingrese su email"
-            id="email"
-            required
-          />
+            <label for="comments">Comentarios</label>
+            <textarea
+              name="comments"
+              id="comments"
+              cols="30"
+              rows="10"
+              placeholder="Ingrese su comentario"
+              required
+            ></textarea>
+            <input type="submit" value="Enviar" />
+          </form>
+        </div>
 
-          <label for="comments">Comentarios</label>
-          <textarea
-            name="comments"
-            id="comments"
-            cols="30"
-            rows="10"
-            required
-          ></textarea>
-          <input type="submit" value="Enviar" />
-        </form>
+        <div class="fl mit">
+          <p>
+            Hola!<br />Si tienes alguna pregunta o si te gustaría colaborar en
+            esta página, envíame un mensaje y te contestaré a la brevedad.
+          </p>
+        </div>
       </section>
     </main>
 
     <footer>
-      <p><span>Copyright 2020 @</span>Jesica A.</p>
+      <p><span>Copyright 2020 &copy</span>Jesica A.</p>
     </footer>
   </body>
 </html>

@@ -14,10 +14,10 @@
   <body class="back">
     <header>
       <nav>
-        <ul>
-          <li><img src="logoffxv.png" alt="Logo-de-FFXV" /></li>
-          <!--No tengo esta imagen, el nombre es inventado-->
-          <li><a href="index.html">Home</a></li>
+        <a href="index.html"
+          ><img class="logo" src="img/ffxvlogo.png" alt="Logo-de-FFXV"
+        /></a>
+        <ul class="menu">
           <li><a href="about.html">About</a></li>
           <li><a href="game.html">Game</a></li>
           <li><a href="media.html">Media</a></li>
@@ -27,19 +27,17 @@
     </header>
 
     <main>
-      <section>
-        <h2 class="c1">Trailer</h2>
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/IiI7SMQA59Q"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
+      <section class="cont">
+        <h2 class="c1">Contenido</h2>
+        <ol class="text">
+          <li><a href="#tra">Trailer</a></li>
+          <li><a href="#mus">Music</a></li>
+          <li><a href="#phg">Photo Gallery</a></li>
+          <li><a href="#gam">Gameplay</a></li>
+        </ol>
       </section>
 
-      <section>
+      <section class="fr mit" id="mus">
         <h2 class="c1">Music</h2>
         <iframe
           src="https://open.spotify.com/embed?uri=spotify:album:2zKqD5DUNUE4isjGLixU8v"
@@ -51,13 +49,25 @@
         ></iframe>
       </section>
 
-      <section>
+      <section class="fl mit" id="tra">
+        <h2 class="c1">Trailer</h2>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/IiI7SMQA59Q"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </section>
+
+      <section id="phg">
         <h2 class="c1">Photo Gallery</h2>
         <!--Aca van varias imagenes que se pueden pasar con botones <> -->
         <img src="img/img4.png" alt="" />
       </section>
 
-      <section>
+      <section id="gam">
         <h2 class="c1">Gameplay</h2>
         <iframe
           width="560"
