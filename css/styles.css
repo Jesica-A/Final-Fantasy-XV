@@ -4,15 +4,16 @@
 * {
   margin: 0px;
   padding: 0px;
+  box-sizing: border-box;
 }
 
 html {
   scroll-behavior: smooth;
-  font-family: "Poppins", sans-serif;
 }
 
 body {
   color: #ffffff;
+  font-family: "Poppins", sans-serif;
 }
 
 /*links*/
@@ -40,10 +41,10 @@ ol li {
 h3 {
   font-size: 1.5rem;
   text-align: center;
+  margin: 2em 0em 1.3em 0em;
 }
 
 p {
-  line-height: 2em;
   text-align: justify;
   text-indent: 0.8em;
 }
@@ -59,51 +60,62 @@ p {
   border-bottom: 2px solid;
   text-align: center;
 }
+.cont .c1{
+  text-align: left;
+  width: 45%;
+}
+
+.container{  
+  width: 90%;
+  margin: 3em auto;
+}
+
+.container2 .text{
+  width: 50%;
+}
 
 section {
   padding: 5em;
+  margin-bottom: 3em;
+  box-shadow: inset 0 0 20px rgb(41, 89, 179);
+}
+section.cont{
+  box-shadow: none;
 }
 
-.text {
-  margin: 2em;
-}
-/*flotacion*/
-.fl {
-  float: left;
-}
-
-.fr {
-  float: right;
-}
-
-/*iconos, imagenes*/
+/*iconos*/
 .iconify {
   font-size: 1.8em;
 }
 
-section img {
-  margin: 2em 0.9em 0em 0.9em;
-}
 /*barra de navegacion*/
-nav {
+header, footer{
   background-color: rgba(0, 0, 0, 0.904);
+}
+
+header .container{
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  margin: 0em auto;
+}
+
+nav {
   font-family: "Old Standard TT", serif;
   text-transform: uppercase;
   font-weight: bold;
-  padding: 0em 1.2em;
+
 }
-.menu {
-  margin-left: 50em; /*no encontre otra forma de acomodarlos a la derecha de la pantalla*/
-  display: inline;
+nav ul{
+  display: flex;
+  justify-content:space-around;
+}
+nav li {
+  font-size: 1.2em;
+  margin-left: 1.5em;
 }
 
-nav li {
-  display: inline-block;
-  font-size: 1.2em;
-  padding-left: 1em;
-}
 .logo {
-  display: inline;
   opacity: 0.5;
 }
 .logo:hover {
@@ -137,6 +149,11 @@ footer span {
   background-size: cover;
 }
 
+.container-index{
+  width: 90%;
+  margin: 3em auto 0em auto;
+}
+
 h1 {
   font-family: "Old Standard TT", serif;
   font-size: 3.5em;
@@ -145,22 +162,29 @@ h1 {
   text-decoration: underline #ffffff;
   letter-spacing: 0.1em;
   -webkit-text-stroke: 0.5px rgb(0, 0, 0);
-  margin: 1.1em 1em;
+  margin: 1.1em 0em;
 }
 
 section.modal {
   background-color: rgba(0, 0, 0, 0.5);
-  width: 45%;
+  width: 55%;
   padding: 1.4em 3em;
-  margin: 2em 0em 0em 3em;
+  margin: 2em 0em;
+  box-shadow: none;
+}
+section.modal p{
+  line-height: 2em;
 }
 section.modal h2 {
   margin-bottom: 0.5em;
 }
 
+/*social media*/
 .sm {
   text-align: center;
-  padding: 2.5em 0em 0.5em 0em;
+  padding: 1.8em 0em 0.7em 0em;
+  box-shadow: none;
+  margin-bottom: 0em;
 }
 .sm ul li,
 .modal ul li {
@@ -181,40 +205,95 @@ section.modal h2 {
 }
 
 /*---------------------------------------ABOUT---------------------------------------*/
+/*acerca del juego*/
+.container2{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1.5em;
+}
+.container2 .text, .container2 .text-alt{
+  padding: 0em 3em;
+  align-self: center;
+  line-height: 2.8em;
+}
+
+/*colaboraciones*/
+.container2 .text-alt{
+  padding: 0em;
+}
+
+/*galerias de imagenes*/
+.team ul, .dlc ul{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-evenly;
+}
+.team li, .dlc li{
+  margin: 2em 0.9em 0em 0.9em;
+}
+
+/*critica*/
+.text li{
+  display: flex;
+  align-items: center;
+  padding: 0.5em 0em;
+}
+.text li .iconify{
+  margin-right: 1em;
+}
+
 td {
   padding: 0.3em 5em 0.3em 0em;
 }
 
-#adj,
-#cri,
-#col {
-  background-color: rgb(15, 15, 19);
-}
-
-#adj .text {
-  width: 68%;
+#adj, #cri, #col {
+  background-color: rgba(15, 15, 19, 0.815);
 }
 
 /*---------------------------------------GAME---------------------------------------*/
-
-#his .text,
-#pel .text,
-#cos .text {
+#pel .text{
   width: 68%;
+} 
+section#pel, section#sid{
+  background-color:rgb(15, 15, 19);
+}
+
+.carousel{
+  margin: 2em;
 }
 /*---------------------------------------MEDIA---------------------------------------*/
-.mit {
-  width: 43%;
-  margin-top: 0em;
-  height: 70vh;
+#tra {
+  width: 57%; 
+}
+#tra iframe {
+  margin: 2.4em 0.5em;
 }
 
-section.fl {
-  padding-right: 0em;
+#mus{
+  width: 35%;
+}
+#mus iframe{
+  margin: 2.4em 2em;
 }
 
-section.fr {
-  padding-left: 0em;
+#phg img{
+  margin: 2em 10
 }
 
 /*---------------------------------------CONTACT---------------------------------------*/
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+#contact {
+  margin-bottom: 0em;
+}
+
+#contact .text, form{
+  width: 50%;
+}
+
+#contact .container2 .text, form{
+  padding: 0em 4em;
+}

@@ -3,27 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-      src="https://kit.fontawesome.com/20cfbc7c59.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://kit.fontawesome.com/20cfbc7c59.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/styles.css" />
     <title>Final Fantasy XV</title>
   </head>
 
   <body class="back">
     <header>
-      <nav>
-        <a href="index.html"
-          ><img class="logo" src="img/ffxvlogo.png" alt="Logo-de-FFXV"
-        /></a>
-        <ul class="menu">
-          <li><a href="about.html">About</a></li>
-          <li><a href="game.html">Game</a></li>
-          <li><a href="media.html">Media</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
+      <div class="container fl-nav">
+        <a href="index.html"><img class="logo" src="img/ffxvlogo.png" alt="Logo-de-FFXV"/></a>
+        <nav>
+          <ul class="menu">
+            <li><a href="about.html">About</a></li>
+            <li><a href="game.html">Game</a></li>
+            <li><a href="media.html">Media</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>  
     </header>
 
     <main>
@@ -37,47 +34,32 @@
         </ol>
       </section>
 
-      <section class="fr mit" id="mus">
-        <h2 class="c1">Music</h2>
-        <iframe
-          src="https://open.spotify.com/embed?uri=spotify:album:2zKqD5DUNUE4isjGLixU8v"
-          width="300"
-          height="380"
-          frameborder="0"
-          allowtransparency="true"
-          allow="encrypted-media"
-        ></iframe>
-      </section>
-
-      <section class="fl mit" id="tra">
-        <h2 class="c1">Trailer</h2>
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/IiI7SMQA59Q"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-      </section>
-
-      <section id="phg">
-        <h2 class="c1">Photo Gallery</h2>
-        <!--Aca van varias imagenes que se pueden pasar con botones <> -->
-        <img src="img/img4.png" alt="" />
-      </section>
-
-      <section id="gam">
-        <h2 class="c1">Gameplay</h2>
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/videoseries?list=PLBIk-P6WmDD0Mb9QW-pKxeyqw3GtOEBKe"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-      </section>
+      <div class="container">
+        <section>
+          <div class="container2">
+            <div id="tra">
+              <h2 class="c1">Trailer</h2>
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/IiI7SMQA59Q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen><iframe></iframe>
+            </div>
+            
+            <div id="mus">
+              <h2 class="c1">Music</h2>
+              <iframe src="https://open.spotify.com/embed?uri=spotify:album:2zKqD5DUNUE4isjGLixU8v" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            </div>
+          </div>
+        </section>
+  
+        <section id="phg">
+          <h2 class="c1">Photo Gallery</h2>
+          <!--Aca van varias imagenes que se pueden pasar con botones <> -->
+          <img src="img/img4.png" class="carousel" alt="" />
+        </section>
+  
+        <section id="gam">
+          <h2 class="c1">Gameplay</h2>
+          <iframe width="800"height="500" src="https://www.youtube.com/embed/videoseries?list=PLBIk-P6WmDD0Mb9QW-pKxeyqw3GtOEBKe" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </section>
+      </div>
     </main>
 
     <footer>

@@ -3,71 +3,53 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-      src="https://kit.fontawesome.com/20cfbc7c59.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://kit.fontawesome.com/20cfbc7c59.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/styles.css" />
     <title>Final Fantasy XV</title>
   </head>
 
   <body class="back">
     <header>
-      <nav>
-        <a href="index.html"
-          ><img class="logo" src="img/ffxvlogo.png" alt="Logo-de-FFXV"
-        /></a>
-        <ul class="menu">
-          <li><a href="about.html">About</a></li>
-          <li><a href="game.html">Game</a></li>
-          <li><a href="media.html">Media</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
+      <div class="container fl-nav">
+        <a href="index.html"><img class="logo" src="img/ffxvlogo.png" alt="Logo-de-FFXV"/></a>
+        <nav>
+          <ul class="menu">
+            <li><a href="about.html">About</a></li>
+            <li><a href="game.html">Game</a></li>
+            <li><a href="media.html">Media</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>  
     </header>
 
     <main>
-      <section>
+      <section id="contact">
         <h2 class="c1">Contáctame</h2>
-        <div class="fr mit">
+        <div class="container2">
+          <div class="text">
+            <p>
+              Hola!<br />Si tienes alguna pregunta o si te gustaría colaborar en
+              esta página, envíame un mensaje y te contestaré a la brevedad.
+            </p>
+          </div>
+
           <form action="#" method="post">
             <label for="name">Nombre</label>
-            <input
-              type="text"
-              name="name"
-              placeholder="Ingrese su nombre"
-              id="name"
-              required
-            />
+            <input type="text" name="name" placeholder="Ingrese su nombre" id="name" required/>
 
             <label for="email">Email</label>
-            <input
-              type="email"
-              name="email"
-              placeholder="Ingrese su email"
-              id="email"
-              required
-            />
+            <input type="email" name="email" placeholder="Ingrese su email" id="email" required/>
 
             <label for="comments">Comentarios</label>
-            <textarea
-              name="comments"
-              id="comments"
-              cols="30"
-              rows="10"
-              placeholder="Ingrese su comentario"
-              required
-            ></textarea>
+            <textarea name="comments" id="comments" cols="30" rows="10" placeholder="Ingrese su comentario" required></textarea>
             <input type="submit" value="Enviar" />
           </form>
         </div>
+          
 
-        <div class="fl mit">
-          <p>
-            Hola!<br />Si tienes alguna pregunta o si te gustaría colaborar en
-            esta página, envíame un mensaje y te contestaré a la brevedad.
-          </p>
-        </div>
+
+        
       </section>
     </main>
 
