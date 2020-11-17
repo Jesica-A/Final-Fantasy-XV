@@ -7,9 +7,7 @@
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth;}
 
 body {
   color: #ffffff;
@@ -21,19 +19,14 @@ a {
   color: #ffffff;
   text-decoration: none;
 }
-nav a:hover,
-ol li a:hover {
-  color: rgb(0, 183, 255);
-}
+nav a:hover, ol li a:hover { color: #5FAFCA;}
 
 /*listas*/
-ul li {
-  list-style: none;
-}
+ul li { list-style: none;}
 
 ol li {
   font-size: 1.2em;
-  padding: 0.2em;
+  padding: .2em;
   margin-left: 1.5em;
 }
 
@@ -41,12 +34,12 @@ ol li {
 h3 {
   font-size: 1.5rem;
   text-align: center;
-  margin: 2em 0em 1.3em 0em;
+  margin: 2em 0 1.3em 0;
 }
 
 p {
   text-align: justify;
-  text-indent: 0.8em;
+  text-indent: .8em;
 }
 
 .c1 {
@@ -54,9 +47,9 @@ p {
   font-size: 2.5em;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: .1em;
   color: rgb(240, 239, 245);
-  padding-bottom: 0.2em;
+  padding-bottom: .2em;
   border-bottom: 2px solid;
   text-align: center;
 }
@@ -70,34 +63,26 @@ p {
   margin: 3em auto;
 }
 
-.container2 .text{
-  width: 50%;
-}
+.container2 .text{width: 50%;}
 
 section {
   padding: 5em;
   margin-bottom: 3em;
   box-shadow: inset 0 0 20px rgb(41, 89, 179);
 }
-section.cont{
-  box-shadow: none;
-}
+section.cont{box-shadow: none;}
 
 /*iconos*/
-.iconify {
-  font-size: 1.8em;
-}
+.iconify {font-size: 1.8em;}
 
 /*barra de navegacion*/
-header, footer{
-  background-color: rgba(0, 0, 0, 0.904);
-}
+header, footer{background-color: rgba(0, 0, 0, 0.904);}
 
 header .container{
   display: flex;
   justify-content:space-between;
   align-items: center;
-  margin: 0em auto;
+  margin: 0 auto;
 }
 
 nav {
@@ -115,32 +100,23 @@ nav li {
   margin-left: 1.5em;
 }
 
-.logo {
-  opacity: 0.5;
-}
-.logo:hover {
-  opacity: 1;
-}
+.logo {opacity: 0.5;}
+.logo:hover {opacity: 1;}
 
 /*footer*/
 footer {
   background-color: rgba(0, 0, 0, 0.904);
-  padding: 0.2em;
+  padding: .2em;
 }
-footer p {
-  text-align: center;
-}
-footer span {
-  font-weight: normal;
-}
+footer p {text-align: center;}
+footer span {font-weight: normal;}
 
 /*Fondo para las secciones*/
-.back {
-  background-image: url(../img/fav3.jpg);
-}
+.back {background-image: url(../img/fav3.jpg);}
 .cont {
   background: url(../img/contenido.jpg) no-repeat center center;
   background-size: cover;
+  height: calc(100vh - 65px);
 }
 
 /*---------------------------------------INDEX---------------------------------------*/
@@ -151,7 +127,7 @@ footer span {
 
 .container-index{
   width: 90%;
-  margin: 3em auto 0em auto;
+  margin: 3em auto 0 auto;
 }
 
 h1 {
@@ -160,49 +136,36 @@ h1 {
   font-weight: 700;
   text-transform: uppercase;
   text-decoration: underline #ffffff;
-  letter-spacing: 0.1em;
+  letter-spacing: .1em;
   -webkit-text-stroke: 0.5px rgb(0, 0, 0);
-  margin: 1.1em 0em;
+  margin: 1.1em 0;
 }
 
 section.modal {
   background-color: rgba(0, 0, 0, 0.5);
   width: 55%;
   padding: 1.4em 3em;
-  margin: 2em 0em;
+  margin: 2em 0;
   box-shadow: none;
 }
-section.modal p{
-  line-height: 2em;
-}
-section.modal h2 {
-  margin-bottom: 0.5em;
-}
+section.modal p{line-height: 2em;}
+section.modal h2 {margin-bottom: 0.5em;}
 
 /*social media*/
 .sm {
   text-align: center;
-  padding: 1.8em 0em 0.7em 0em;
+  padding: 1.8em 0 .7em 0;
   box-shadow: none;
-  margin-bottom: 0em;
+  margin-bottom: 0;
 }
-.sm ul li,
-.modal ul li {
+.sm ul li, .modal ul li {
   display: inline-block;
   padding: 1em;
 }
-#facebook:hover {
-  color: #3b5998;
-}
-#instagram:hover {
-  color: #e1306c;
-}
-#youtube:hover {
-  color: #ff0000;
-}
-#twitter:hover {
-  color: #1da1f2;
-}
+#facebook:hover {color: #3b5998;}
+#instagram:hover {color: #e1306c;}
+#youtube:hover {color: #ff0000;}
+#twitter:hover {color: #1da1f2;}
 
 /*---------------------------------------ABOUT---------------------------------------*/
 /*acerca del juego*/
@@ -212,15 +175,13 @@ section.modal h2 {
   padding-top: 1.5em;
 }
 .container2 .text, .container2 .text-alt{
-  padding: 0em 3em;
+  padding: 0 3em;
   align-self: center;
   line-height: 2.8em;
 }
 
 /*colaboraciones*/
-.container2 .text-alt{
-  padding: 0em;
-}
+.container2 .text-alt{padding: 0;}
 
 /*galerias de imagenes*/
 .team ul, .dlc ul{
@@ -228,57 +189,69 @@ section.modal h2 {
   flex-wrap: wrap;
   justify-content:space-evenly;
 }
-.team li, .dlc li{
-  margin: 2em 0.9em 0em 0.9em;
-}
+.team li, .dlc li{margin: 2em .9em 0 .9em;}
 
 /*critica*/
 .text li{
   display: flex;
   align-items: center;
-  padding: 0.5em 0em;
+  padding: .5em 0;
 }
-.text li .iconify{
-  margin-right: 1em;
-}
+.text li .iconify{margin-right: 1em;}
 
-td {
-  padding: 0.3em 5em 0.3em 0em;
-}
+td {padding: .3em 5em .3em 0;}
 
-#adj, #cri, #col {
-  background-color: rgba(15, 15, 19, 0.815);
-}
+#adj, #cri, #col {background-color: rgba(15, 15, 19, 0.815);}
 
 /*---------------------------------------GAME---------------------------------------*/
-#pel .text{
-  width: 68%;
-} 
-section#pel, section#sid{
-  background-color:rgb(15, 15, 19);
-}
+#pel .text{width: 68%;} 
 
-.carousel{
-  margin: 2em;
+section#pel, section#sid{background-color:rgb(15, 15, 19);}
+
+.carousel{margin: 2em;}
+
+.grid-container {
+  width: 1050px;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr 1fr 0.7fr 1.3fr;
+  grid-template-rows: 2fr 0.9fr 0.9fr 0.8fr 2fr;
+  grid-template-areas:
+    "iris cid cid cid ravus"
+    "iris iedolas iedolas iedolas ravus"
+    "cindy iedolas iedolas iedolas ravus"
+    "cindy iedolas iedolas iedolas cor"
+    "cindy aranea aranea aranea cor";
 }
+.ravus { 
+  background: url(../img/ravus.jpg);
+  grid-area: ravus; }
+.cindy { 
+  background: url(../img/cindy.jpg);
+  grid-area: cindy; }
+.cor { 
+  background:url(../img/cor.jpg);
+  grid-area: cor; }
+.iedolas { 
+  background: url(../img/iedolas.jpg);
+  grid-area: iedolas; }
+.aranea { 
+  background: url(../img/aranea.jpg);
+  grid-area: aranea; }
+.iris { 
+  background: url(../img/iris.jpg);
+  grid-area: iris; }
+.cid { 
+  background: url(../img/cid.jpg);
+  grid-area: cid; }
 /*---------------------------------------MEDIA---------------------------------------*/
-#tra {
-  width: 57%; 
-}
-#tra iframe {
-  margin: 2.4em 0.5em;
-}
+#tra {width: 57%; }
+#tra iframe {margin: 2.4em .5em;}
 
-#mus{
-  width: 35%;
-}
-#mus iframe{
-  margin: 2.4em 2em;
-}
+#mus{width: 35%;}
+#mus iframe{margin: 2.4em 2em;}
 
-#phg img{
-  margin: 2em 10
-}
+#phg img{margin: 2em 10}
 
 /*---------------------------------------CONTACT---------------------------------------*/
 form {
@@ -286,14 +259,8 @@ form {
   flex-direction: column;
 }
 
-#contact {
-  margin-bottom: 0em;
-}
+#contact {margin-bottom: 0;}
 
-#contact .text, form{
-  width: 50%;
-}
+#contact .text, form{width: 50%;}
 
-#contact .container2 .text, form{
-  padding: 0em 4em;
-}
+#contact .container2 .text, form{padding: 0 4em;}
