@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://kit.fontawesome.com/20cfbc7c59.js" crossorigin="anonymous"></script>
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
     <link rel="stylesheet" href="css/styles.css" />
     <title>Final Fantasy XV</title>
   </head>
 
   <body class="back">
-    <header>
+    <header id="top">
       <div class="container fl-nav">
         <a href="index.html"><img class="logo" src="img/ffxvlogo.png" alt="Logo-de-FFXV"/></a>
         <nav>
@@ -28,14 +28,14 @@
         <h2 class="c1">Contenido</h2>
         <ol class="text">
           <li><a href="#tra">Trailer</a></li>
-          <li><a href="#mus">Music</a></li>
-          <li><a href="#phg">Photo Gallery</a></li>
+          <li><a href="#mus">Música</a></li>
+          <li><a href="#phg">Fotos</a></li>
           <li><a href="#gam">Gameplay</a></li>
         </ol>
       </section>
 
       <div class="container">
-        <section>
+        <section class="bmo">
           <div class="container2">
             <div id="tra">
               <h2 class="c1">Trailer</h2>
@@ -43,23 +43,26 @@
             </div>
             
             <div id="mus">
-              <h2 class="c1">Music</h2>
+              <h2 class="c1">Música</h2>
               <iframe src="https://open.spotify.com/embed?uri=spotify:album:2zKqD5DUNUE4isjGLixU8v" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
             </div>
           </div>
         </section>
   
-        <section id="phg">
-          <h2 class="c1">Photo Gallery</h2>
+        <section id="phg" class="bmo">
+          <h2 class="c1">Fotos</h2>
           <!--Aca van varias imagenes que se pueden pasar con botones <> -->
           <img src="img/img4.png" class="carousel" alt="" />
         </section>
   
-        <section id="gam">
+        <section id="gam" class="bmo">
           <h2 class="c1">Gameplay</h2>
           <iframe width="800"height="500" src="https://www.youtube.com/embed/videoseries?list=PLBIk-P6WmDD0Mb9QW-pKxeyqw3GtOEBKe" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </section>
       </div>
+
+      <!-- Boton para subir-->
+      <a href="#top" class="up"><span class="iconify" data-icon="bx:bxs-up-arrow" data-inline="false"></span></a>
     </main>
 
     <footer>
