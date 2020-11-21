@@ -29,6 +29,7 @@ h2 {
 
 h3 {
     font-size: 1.3em;
+    font-weight: 600;
     text-align: center;
 }
 
@@ -71,7 +72,7 @@ ol li {
 .cont {
   background: url(../img/contenido.jpg) no-repeat 80%;
   background-size: cover;
-  height: calc(100vh - 65px);
+  height: calc(100vh - 79px);
   padding: 3em;
 }
 .bmo {
@@ -87,10 +88,9 @@ section .sm, section.container-index {margin-bottom: 0;}
     background: url(../img/fondoindex.png) no-repeat 80%;
     background-size: cover;
     text-align: center;
-    height: calc(100vh - 116px);
 }
 .container-index h1 {
-    font-size: 1.7em;
+    font-size: 2em;
     text-decoration: underline #f1f1f1;
     padding: 1em 0;
     margin: 0;
@@ -111,12 +111,13 @@ section .sm, section.container-index {margin-bottom: 0;}
 }
 
 .sm { 
-    padding: 0 3em;
+    padding: 0 1em;
 }
 .sm ul {
     display: flex; 
     justify-content: space-around;
     align-items: center;
+    margin-bottom: 0 !important;
 }
 #facebook, #instagram, #youtube, #twitter {transition: color .7s;}
 #facebook:hover {color: #3b5998;}
@@ -148,10 +149,8 @@ td:first-child { font-weight: bold;}
 #per h3{margin-top: 1em;}
 
 /*****************************MEDIA*****************************/
-
+#mus {margin-top: 2em}
 /*****************************CONTACT*****************************/
-#contact {height: calc(100vh - 116px);}
-
 form {
   display: flex;
   flex-direction: column;
@@ -162,16 +161,16 @@ form {
 input, textarea {margin-bottom: 1em;}
 
 /***********************MEDIAQUERY********************/
-@media (min-width: 768px) {
-    .cont h2 {
+@media (min-width: 768px) { 
+  .cont h2 {
         width: 45%;
         text-align: left;
     }
-    .iconify { font-size: 2.7em;}
+    .iconify { font-size: 2em;}
     .sm {margin-top: 0;}
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
     body {font-size: 1.2em;}
     .bmo {padding: 3.5em;}
     .container{max-width: 1340px;}
@@ -179,6 +178,7 @@ input, textarea {margin-bottom: 1em;}
     .container-index { 
         text-align: left;
         padding: 0 2em;
+        height: calc(100vh - 103px);
     }
     .mod-black {padding: 2em;}
     .mod-black ul{display: flex;}
@@ -234,4 +234,7 @@ input, textarea {margin-bottom: 1em;}
     background-size: cover;
     }
 
+    #mus {margin-top: 0}
+
+    #contact {height: calc(100vh - 103px);}
 }
