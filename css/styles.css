@@ -1,4 +1,3 @@
-/*---------------------------------GENERAL---------------------------------*/
 @import url("https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@400;700&family=Poppins:wght@200;300;400;600;700&display=swap");
 
 * {
@@ -14,293 +13,145 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+/*textos*/
+h1, h2, #navbarNav {
+    font-family: "Old Standard TT", serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+}
+
+h2 {
+    font-size: 1.5em;
+    text-align: center;
+    border-bottom: 2px solid;
+}
+
+h3 {
+    font-size: 1.3em;
+    text-align: center;
+}
+
+p {line-height: 1.7em;}
+
+.text {padding: 2em;}
+
 /*links*/
 a {
-  color: #f1f1f1;
+  color: #f1f1f1 !important;
   text-decoration: none;
+  transition: color .7s;
 }
-nav a:hover, ol li a:hover { color: #5FAFCA;}
+a:hover, .active {color: #5FAFCA !important;}
 
 /*listas*/
 ul li { list-style: none;}
 
 ol li {
-  font-size: 1.2em;
-  padding: .2em;
+  font-size: 1.3em;
+  padding: .3em;
   margin-left: 1.5em;
 }
 
-/*textos*/
-h3 {
-  font-size: 1.5rem;
-  text-align: center;
-  margin: 2em 0 1.3em 0;
+/*iconos e imagenes*/
+.iconify {
+    font-size: 2em;
+    padding-right: .2em;
 }
 
-p {
-  text-align: justify;
-  text-indent: .8em;
-}
+.img-mob {width: 100%;}
 
-.c1 {
-  font-family: "Old Standard TT", serif;
-  font-size: 2.5em;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: .1em;
-  padding-bottom: .2em;
-  border-bottom: 2px solid;
-  text-align: center;
-}
-.cont .c1{
-  text-align: left;
-  width: 45%;
-}
+/*nav y footer*/
+.bg-dark {background: #0f1117 !important;}
+#navbarNav {justify-content: flex-end;}
+.nav-item {padding-left: 1em;}
 
-/*Secciones*/
-.container{  
-  width: 90%;
-  margin: 3em auto;
-}
-
-.container2 .text{width: 50%;}
-
-section {
-  padding: 5em;
-  margin-bottom: 3em;
-  box-shadow: inset 0 0 20px rgb(41, 89, 179);
-}
-section.cont{box-shadow: none;}
-
-.bmo {background-color: rgba(15, 15, 19, 0.815);}
-
-.index, #contact {height: calc(100vh - 96.3px);}
-/*iconos*/
-.iconify {font-size: 1.8em;}
-
-/*barra de navegacion*/
-header, footer{background-color: rgba(0, 0, 0, 0.904);}
-
-header .container{
-  display: flex;
-  justify-content:space-between;
-  align-items: center;
-  margin: 0 auto;
-}
-
-nav {
-  font-family: "Old Standard TT", serif;
-  text-transform: uppercase;
-  font-weight: bold;
-
-}
-nav ul{
-  display: flex;
-  justify-content:space-around;
-}
-nav li {
-  font-size: 1.2em;
-  margin-left: 1.5em;
-}
-
-.logo {opacity: 0.5;}
-.logo:hover {opacity: 1;}
-
-/*Boton para subir*/
-.up {
-	position: fixed;
-		bottom: 1.4em;
-		right: 1.4em;
-	color: rgb(41, 89, 179);
-  background: rgba(15, 15, 19, 0.815);
-  box-shadow: inset 0 0 10px rgb(41, 89, 179);
-	font-size: 1em;
-	padding: .5em;
-	border-radius: 50%;
-}
-
-/*footer*/
-footer {padding: .2em;}
-footer p {text-align: center;}
-footer span {font-weight: normal;}
-
-/*Fondo para las secciones*/
+/*fondos y secciones*/
 .back {background-image: url(../img/fav3.jpg);}
 .cont {
-  background: url(../img/contenido.jpg) no-repeat center center;
+  background: url(../img/contenido.jpg) no-repeat 80%;
   background-size: cover;
   height: calc(100vh - 65px);
+  padding: 3em;
+}
+.bmo {
+    background-color: rgba(15, 15, 19, 0.815);
+    padding: 1.3em;
+    box-shadow: inset 0 0 20px rgb(41, 89, 179);
 }
 
-/*---------------------------------------INDEX---------------------------------------*/
-.index {
-  background: url(../img/fondoindex.png) no-repeat center center;
-  background-size: cover;
+section {margin-bottom: 3em;}
+section .sm, section.container-index {margin-bottom: 0;}
+/*****************************INDEX*****************************/
+.container-index {
+    background: url(../img/fondoindex.png) no-repeat 80%;
+    background-size: cover;
+    text-align: center;
+    height: calc(100vh - 116px);
+}
+.container-index h1 {
+    font-size: 1.7em;
+    text-decoration: underline #f1f1f1;
+    padding: 1em 0;
+    margin: 0;
+    -webkit-text-stroke: 0.5px rgb(0, 0, 0);
 }
 
-.container-index{
-  width: 90%;
-  margin: 3em auto 0 auto;
+.mod-black {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1em;
+    margin-bottom: 1em;
+}
+.mod-black ul > * {margin-right: .7em;}
+
+.btn:hover{
+    color: #5FAFCA;
+    border: 2px solid #5FAFCA;
+    background: transparent;
 }
 
-h1 {
-  font-family: "Old Standard TT", serif;
-  font-size: 3.5em;
-  font-weight: 700;
-  text-transform: uppercase;
-  text-decoration: underline #f1f1f1;
-  letter-spacing: .1em;
-  -webkit-text-stroke: 0.5px rgb(0, 0, 0);
-  margin: 1.1em 0;
+.sm { 
+    padding: 0 3em;
 }
-
-.modal {
-  background-color: rgba(0, 0, 0, 0.5);
-  width: 55%;
-  padding: 1.4em 3em;
-  margin: 2em 0;
-  box-shadow: none;
+.sm ul {
+    display: flex; 
+    justify-content: space-around;
+    align-items: center;
 }
-.modal p{line-height: 2em;}
-.modal h2 {margin-bottom: 0.5em;}
-.modal ul{display:flex;}
-.modal ul li{
-  display: flex;
-  align-items: center;
-  padding: .5em 0;
-}
-
-.button {
-	text-decoration: none;
-	text-transform: uppercase;
-	letter-spacing: .1em;
-	font-weight: bold;
-	padding: .7em 1em;
-	border-radius: .5em;
-	margin-right: 1em;
-	font-size: .8em;
-}
-
-.pri {
-	color: #f1f1f1;
-	border: 2px solid #f1f1f1;
-}
-.pri:hover{
-  color: #5FAFCA;
-  border: 2px solid #5FAFCA;
-}
-
-
-/*social media*/
-.sm {
-  text-align: center;
-  padding: 1.8em 0 .7em 0;
-  box-shadow: none;
-  margin-bottom: 0;
-}
-.sm ul{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.sm ul li, .modal ul li {padding: 1em;}
-
+#facebook, #instagram, #youtube, #twitter {transition: color .7s;}
 #facebook:hover {color: #3b5998;}
 #instagram:hover {color: #e1306c;}
 #youtube:hover {color: #ff0000;}
 #twitter:hover {color: #1da1f2;}
-
-/*---------------------------------------ABOUT---------------------------------------*/
-/*acerca del juego*/
-.container2{
-  display: flex;
-  justify-content: space-between;
-  padding-top: 1.5em;
+/*****************************ABOUT*****************************/
+/*equipo*/
+#equ ul, #exp ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
 }
-.container2 .text, .container2 .text-alt{
-  padding: 0 3em;
-  align-self: center;
-  line-height: 2.8em;
-}
-
-/*colaboraciones*/
-.container2 .text-alt{padding: 0;}
-
-/*galerias de imagenes*/
-.team ul, .dlc ul{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content:space-evenly;
-}
-.team li, .dlc li{margin: 2em .9em 0 .9em;}
+#equ li, #exp li {padding: .3em 0;}
 
 /*critica*/
-.text li{
-  display: flex;
-  align-items: center;
-  padding: .5em 0;
-}
-.text li .iconify{margin-right: 1em;}
-
-td {padding: .3em 5em .3em 0;}
-
-/*---------------------------------------GAME---------------------------------------*/
-#pel .text{width: 68%;} 
-
-.carousel{margin: 2em;}
-
-.grid-container {
-  width: 1050px;
-  height: 100vh;
-  display: grid;
-  grid-template-columns: 1.3fr 0.7fr 1fr 0.7fr 1.3fr;
-  grid-template-rows: 2fr 0.9fr 0.9fr 0.8fr 2fr;
-  grid-template-areas:
-    "iris cid cid cid ravus"
-    "iris iedolas iedolas iedolas ravus"
-    "cindy iedolas iedolas iedolas ravus"
-    "cindy iedolas iedolas iedolas cor"
-    "cindy aranea aranea aranea cor";
-}
-.ravus { 
-  background: url(../img/ravus.jpg);
-  grid-area: ravus; 
-}
-.cindy { 
-  background: url(../img/cindy.jpg);
-  grid-area: cindy; 
-}
-.cor { 
-  background:url(../img/cor.jpg);
-  grid-area: cor; 
-}
-.iedolas { 
-  background: url(../img/iedolas.jpg);
-  grid-area: iedolas; 
-}
-.aranea { 
-  background: url(../img/aranea.jpg);
-  grid-area: aranea; 
-}
-.iris { 
-  background: url(../img/iris.jpg);
-  grid-area: iris; 
-}
-.cid { 
-  background: url(../img/cid.jpg);
-  grid-area: cid; 
+ul.stars  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
 }
 
-/*---------------------------------------MEDIA---------------------------------------*/
-#tra {width: 57%; }
-#tra iframe {margin: 2.4em .5em;}
+/*ficha tecnica*/
+.table {color: #f1f1f1 !important;}
+td:first-child { font-weight: bold;}
+/*****************************GAME*****************************/
+.grid-container { display: none;}
+#per h3{margin-top: 1em;}
 
-#mus{width: 35%;}
-#mus iframe{margin: 2.4em 2em;}
+/*****************************MEDIA*****************************/
 
-#phg img{margin: 2em 10}
+/*****************************CONTACT*****************************/
+#contact {height: calc(100vh - 116px);}
 
-/*---------------------------------------CONTACT---------------------------------------*/
 form {
   display: flex;
   flex-direction: column;
@@ -308,6 +159,79 @@ form {
 
 #contact {margin-bottom: 0;}
 
-#contact .text, form{width: 50%;}
+input, textarea {margin-bottom: 1em;}
 
-#contact .container2 .text, form{padding: 0 4em;}
+/***********************MEDIAQUERY********************/
+@media (min-width: 768px) {
+    .cont h2 {
+        width: 45%;
+        text-align: left;
+    }
+    .iconify { font-size: 2.7em;}
+    .sm {margin-top: 0;}
+}
+
+@media (min-width: 1200px) {
+    body {font-size: 1.2em;}
+    .bmo {padding: 3.5em;}
+    .container{max-width: 1340px;}
+
+    .container-index { 
+        text-align: left;
+        padding: 0 2em;
+    }
+    .mod-black {padding: 2em;}
+    .mod-black ul{display: flex;}
+    .mod-black h3 {text-align: left;}
+    .sm {margin-top: 3em;}
+
+    #equ ul > * {padding: 0.3em;}
+
+    .sec {display: none;}
+    .grid-container {
+        width: 100%;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 1.3fr 0.7fr 1fr 0.7fr 1.3fr;
+        grid-template-rows: 2fr 0.9fr 0.9fr 0.8fr 2fr;
+        grid-template-areas:
+          "iris cid cid cid ravus"
+          "iris iedolas iedolas iedolas ravus"
+          "cindy iedolas iedolas iedolas ravus"
+          "cindy iedolas iedolas iedolas cor"
+          "cindy aranea aranea aranea cor";
+    }
+    .ravus { 
+    background: url(../img/ravus.jpg);
+    grid-area: ravus; 
+    }
+    .cindy { 
+    background: url(../img/cindy.jpg);
+    grid-area: cindy; 
+    }
+    .cor { 
+    background:url(../img/cor.jpg);
+    grid-area: cor; 
+    }
+    .iedolas { 
+    background: url(../img/iedolas.jpg);
+    grid-area: iedolas; 
+    }
+    .aranea { 
+    background: url(../img/aranea.jpg);
+    grid-area: aranea; 
+    }
+    .iris { 
+    background: url(../img/iris.jpg);
+    grid-area: iris; 
+    }
+    .cid { 
+    background: url(../img/cid.jpg);
+    grid-area: cid; 
+    }
+    
+    .ravus, .cindy, .iris, .cid, .aranea, .cor, .iedolas{
+    background-size: cover;
+    }
+
+}
