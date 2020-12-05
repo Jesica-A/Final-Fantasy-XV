@@ -1,0 +1,35 @@
+/*equipo*/
+#equ ul, #exp ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+  #equ li, #exp li {padding: .3em 0;}  
+}
+
+@media (min-width: 1024px) {
+  #equ ul > * {padding: 0.3em;}
+}
+
+/*critica*/
+ul.stars {
+  @extend %display;
+  font-size: 1.2rem;
+}
+
+/*ficha tecnica*/
+.table-fte {
+  @media (min-width: 768px) {
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  li:first-child {
+    font-weight: bold;
+    @media (min-width: 1024px) {
+      width: 25%;
+    }  
+  }
+}

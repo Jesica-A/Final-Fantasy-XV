@@ -36,30 +36,33 @@
     </header>
 
     <main class="back">
-        <section id="contact" class="bmo">
-            <h2>Contáctame</h2>
-            <div class="row">
-                <div class="col-sm-12 col-lg-6 text">
-                    <p>
-                    Hola!<br />Si tienes alguna pregunta o si te gustaría colaborar en
-                    esta página, envíame un mensaje y te contestaré a la brevedad.
-                    </p>
+        <div class="container">
+
+            <section id="contact" class="back__bmo back__contact">
+                <h2 class="contact__title">Contáctame</h2>
+                <div class="row contact__content">
+                    <div class="contact__txt col-sm-12 col-lg-6 text">
+                        <p>Hola!</p>
+                        <p>Si tienes alguna pregunta o si te gustaría colaborar en
+                        esta página, envíame un mensaje y te contestaré a la brevedad.</p>
+                    </div>
+    
+                    <div class="contact__form col-sm-12 col-lg-6">
+                        <form action="#" method="post">
+                            <label for="name">Nombre</label>
+                            <input type="text" name="name" placeholder="Ingrese su nombre" id="name" required/>
+    
+                            <label for="email">Email</label>
+                            <input type="email" name="email" placeholder="Ingrese su email" id="email" required/>
+    
+                            <label for="comments">Comentarios</label>
+                            <textarea name="comments" id="comments" cols="30" rows="7" placeholder="Ingrese su comentario" required></textarea>
+                            <input type="submit" value="Enviar" />
+                        </form>
+                    </div>
                 </div>
-
-                <form class="col-sm-12 col-lg-6" action="#" method="post">
-                    <label for="name">Nombre</label>
-                    <input type="text" name="name" placeholder="Ingrese su nombre" id="name" required/>
-
-                    <label for="email">Email</label>
-                    <input type="email" name="email" placeholder="Ingrese su email" id="email" required/>
-
-                    <label for="comments">Comentarios</label>
-                    <textarea name="comments" id="comments" cols="30" rows="7" placeholder="Ingrese su comentario" required></textarea>
-                    <input type="submit" value="Enviar" />
-                </form>
-            </div>
-            
-        </section>
+            </section>
+        </div>
     </main>
 
     <footer class="text-center bg-dark">Copyright 2020 @ Jesica A.</footer>
