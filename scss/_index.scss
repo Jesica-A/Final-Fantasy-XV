@@ -1,0 +1,73 @@
+
+.container-index {
+  background: url(../img/fondoindex.png) no-repeat 80%;
+  background-size: cover;
+  text-align: center;
+  height: calc(100vh - 79px);
+  @media (min-width:768px) {
+    height: calc(100vh - 103px);
+  }
+  @media (min-width: 1024px) {
+    text-align: left;
+    padding: 0 2em;
+  }
+
+  h1 {
+    font-size: $title1Size;
+    text-decoration: underline $colorPrimary;
+    padding: 1em 0;
+    margin: 0;
+    -webkit-text-stroke: 0.5px rgb(0, 0, 0);
+    @media (min-width: 1024px) {
+      font-size: 3em;
+    }
+  }
+
+  .container-index__mod-black {
+    background-color: $backgroundTransparent1;
+    padding: 1em;
+    margin-bottom: 1em;
+    @media (min-width: 1024px) {
+        padding: 2em;
+    
+        ul {display: flex;}
+    
+        h3 {text-align: left;}
+      }
+
+    ul > * {margin-right: .7em;}
+  }
+
+  .btn:hover {
+    color: $colorSecundary;
+    border: 2px solid $colorSecundary;
+    background: transparent;
+  }
+}
+
+.sm {
+  padding: 0 1em;
+  @media (min-width: 768px) {
+    margin-top: 0;
+  }
+  @media (min-width: 1024px) {
+    margin-top: 3em;
+  }
+
+  .sm__list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+
+    #facebook, #instagram, #youtube, #twitter {transition: color .7s;}
+
+    #facebook:hover {color: #3b5998;}
+
+    #instagram:hover {color: #e1306c;}
+
+    #youtube:hover {color: #ff0000;}
+
+    #twitter:hover {color: #1da1f2;}    
+  }
+}

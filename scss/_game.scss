@@ -1,0 +1,57 @@
+.grid-container {
+  display: none;
+  @media (min-width: 1024px) {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr 1fr 0.7fr 1.3fr;
+    grid-template-rows: 2fr 0.9fr 0.9fr 0.8fr 2fr;
+    grid-template-areas: "iris cid cid cid ravus" "iris iedolas iedolas iedolas ravus" "cindy iedolas iedolas iedolas ravus" "cindy iedolas iedolas iedolas cor" "cindy aranea aranea aranea cor";
+  
+    .ravus {
+      background: url(../img/ravus.jpg) 70%;
+      grid-area: ravus;
+    }
+  
+    .cindy {
+      background: url(../img/cindy.jpg) 50%;
+      grid-area: cindy;
+    }
+  
+    .cor {
+      background: url(../img/cor.jpg) 70%;
+      grid-area: cor;
+    }
+  
+    .iedolas {
+      background: url(../img/iedolas.jpg);
+      grid-area: iedolas;
+    }
+  
+    .aranea {
+      background: url(../img/aranea.jpg);
+      grid-area: aranea;
+    }
+  
+    .iris {
+      background: url(../img/iris.jpg) 60%;
+      grid-area: iris;
+    }
+  
+    .cid {
+      background: url(../img/cid.jpg);
+      grid-area: cid;
+    }
+  
+    .ravus, .cindy, .iris, .cid, .aranea, .cor, .iedolas {
+      background-size: cover;
+    }
+  }
+}
+
+.bmo__sec {
+  @media (min-width: 1024px) {
+    display: none;
+}
+
+#per h3 {margin-top: 1em;}}
