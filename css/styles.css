@@ -296,8 +296,18 @@ ul.stars, .back__contact form {
   color: #1da1f2;
 }
 
-/*equipo*/
-#equ ul, #exp ul {
+/*Acerca del juego*/
+@media (min-width: 1024px) {
+  #adj .row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+}
+
+/*expansiones*/
+#exp ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -308,8 +318,43 @@ ul.stars, .back__contact form {
           justify-content: space-evenly;
 }
 
-#equ ul #equ li, #equ ul #exp li, #exp ul #equ li, #exp ul #exp li {
-  padding: .3em 0;
+#exp ul li {
+  padding: .7em 0;
+}
+
+/*equipo*/
+.container-album {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .container-album {
+    margin: 0 auto;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  .container-album .album {
+    margin: 1em;
+    height: auto;
+    text-align: center;
+    -webkit-box-shadow: inset 0 0 10px #2959b3;
+            box-shadow: inset 0 0 10px #2959b3;
+    border-radius: .5em;
+  }
+  .container-album .album img {
+    height: 200px;
+    width: 90%;
+    margin-top: .5em;
+    border-radius: .5em;
+  }
+}
+
+@media (min-width: 768px) {
+  #equ #carousel-example-2 {
+    display: none;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -421,8 +466,17 @@ ul.stars {
   }
 }
 
-.bmo__sec #per h3 {
+#per h3 {
   margin-top: 1em;
+}
+
+@media (min-width: 1024px) {
+  #his .row, #cos .row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
 }
 
 #mus {

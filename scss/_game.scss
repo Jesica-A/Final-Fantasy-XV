@@ -54,4 +54,11 @@
     display: none;
 }
 
-#per h3 {margin-top: 1em;}}
+}
+#per h3 {margin-top: 1em;}
+
+@media (min-width: 1024px) {
+  #his .row, #cos .row{
+    flex-direction: row-reverse;
+  }
+}

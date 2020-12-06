@@ -6,7 +6,7 @@ h1, h2, #navbarNav {
     text-transform: uppercase;
     letter-spacing: .1em;
 }
-  
+
 h2 {
     font-size: $title2Size;
     text-align: center;
@@ -15,49 +15,49 @@ h2 {
         font-size: 2rem;
     }
 }
-  
+
 h3 {
     font-size: $title3Size;
     font-weight: 600;
     text-align: center;
 }
-  
+
 p {line-height: 1.7em;}
-  
+
 .text {padding: 2em;}
-  
+
 /*links*/
 a {
     color: $colorPrimary !important;
     text-decoration: none;
     transition: color .7s;
-  
+
     &:hover {
-      color: $colorSecundary !important;
+        color: $colorSecundary !important;
     }
 }
-  
+
 .active {color: $colorSecundary !important;}
-  
+
 /*listas*/
 ul li {list-style: none;}
-  
+
 ol li {
     font-size: 1.3rem;
     padding: .3em;
     margin-left: 1.5em;
 }
-  
+
 /*iconos e imagenes*/
 .iconify{
     font-size: 2em;
     padding-right: .2em;
 }
-  
+
 .img-mob {
     width: 100%;
 }
-  
+
 .up {
     position: fixed;
     bottom: 1.4em;
@@ -68,20 +68,20 @@ ol li {
     font-size: 1em;
     padding: .5em;
     border-radius: 50%;
-  
+
     .iconify {padding-right: 0;}
 }
-  
+
 /*nav y footer*/
 .bg-dark {background: #0f1117 !important;}
-  
+
 #navbarNav {justify-content: flex-end;}
-  
+
 .nav-item {padding-left: 1em;}
-  
+
 /*fondos y secciones*/
 .back {background-image: url(../img/fav3.jpg);}
-  
+
 .back__cont {
     background: url(../img/contenido.jpg) no-repeat 80%;
     background-size: cover;
@@ -95,7 +95,7 @@ ol li {
     }
     
 }
- 
+
 .container{
     @media (min-width: 1024px) {
         max-width: 1340px;
@@ -109,7 +109,7 @@ ol li {
         }
     }
 }
-  
+
 section {margin-bottom: 3em;}
-  
+
 .sm, .container-index, #fte, #per, #gam {margin-bottom: 0;}
