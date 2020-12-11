@@ -183,7 +183,7 @@ ul.stars, .back__contact form {
 }
 
 .container-index {
-  background: url(../img/fondoindex.png) no-repeat 80%;
+  background: url(../img/fondoindex.jpg) no-repeat 80%;
   background-size: cover;
   text-align: center;
   height: calc(100vh - 79px);
