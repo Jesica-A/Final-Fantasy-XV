@@ -72,6 +72,11 @@ ol li {
     .iconify {padding-right: 0;}
 }
 
+.carousel-indicators li {
+    font-size: 1rem;
+    padding: 0.1em 0.3em;
+}
+
 /*nav y footer*/
 .bg-dark {background: #0f1117 !important;}
 
@@ -92,6 +97,11 @@ ol li {
             width: 45%;
             text-align: left;
         }    
+    }
+    li {
+        @media (min-width: 1024px){
+            font-size: 1.6rem ;
+        }
     }
     
 }
