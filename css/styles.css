@@ -197,6 +197,7 @@ ul.stars, .back__contact form {
   background: url(../img/fondoindex.jpg) no-repeat 80%;
   background-size: cover;
   text-align: center;
+  height: 100vh;
 }
 
 @media (min-width: 1024px) {
