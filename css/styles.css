@@ -386,7 +386,7 @@ ul.stars, .back__contact form {
 }
 
 @media (min-width: 768px) {
-  #equ #carousel-example-2 {
+  #equ #magicCarousel {
     display: none;
   }
 }
