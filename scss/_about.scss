@@ -55,6 +55,10 @@ ul.stars {
   font-size: 1.2rem;
 }
 
+ul.win {
+  display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
 /*colaboraciones*/
 #col li {
   list-style: circle;
