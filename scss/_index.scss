@@ -46,29 +46,3 @@
   }
 }
 
-.sm {
-  padding: 0 1em 1em 1em;
-  @media (min-width: 768px) {
-    margin-top: 0;
-  }
-  @media (min-width: 1024px) {
-    margin-top: 3em;
-  }
-
-  .sm__list {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: auto;
-
-    #facebook, #instagram, #youtube, #twitter {transition: color .7s;}
-
-    #facebook:hover {color: #3b5998;}
-
-    #instagram:hover {color: #e1306c;}
-
-    #youtube:hover {color: #ff0000;}
-
-    #twitter:hover {color: #1da1f2;}    
-  }
-}

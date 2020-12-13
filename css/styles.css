@@ -114,6 +114,21 @@ ol li {
   padding: 0.1em 0.3em;
 }
 
+.carousel {
+  position: relative;
+}
+
+.carousel-caption {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 0.5em 1em;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+}
+
 /*nav y footer*/
 .bg-dark {
   background: #0f1117 !important;
@@ -173,8 +188,69 @@ ol li {
   }
 }
 
+.mod-black {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1em;
+  margin-bottom: 1em;
+}
+
 section {
   margin-bottom: 3em;
+}
+
+.sm {
+  padding: 0 1em 1em 1em;
+}
+
+@media (min-width: 768px) {
+  .sm {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .sm {
+    margin-top: 1em;
+  }
+}
+
+@media (min-width: 1200px) {
+  .sm {
+    margin-top: 3em;
+  }
+}
+
+.sm .sm__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+}
+
+.sm .sm__list #facebook, .sm .sm__list #instagram, .sm .sm__list #youtube, .sm .sm__list #twitter {
+  -webkit-transition: color .7s;
+  transition: color .7s;
+}
+
+.sm .sm__list #facebook:hover {
+  color: #3b5998;
+}
+
+.sm .sm__list #instagram:hover {
+  color: #e1306c;
+}
+
+.sm .sm__list #youtube:hover {
+  color: #ff0000;
+}
+
+.sm .sm__list #twitter:hover {
+  color: #1da1f2;
 }
 
 .sm, .container-index, #fte, #per, #gam {
@@ -254,55 +330,6 @@ ul.stars, .back__contact form {
   background: transparent;
 }
 
-.sm {
-  padding: 0 1em 1em 1em;
-}
-
-@media (min-width: 768px) {
-  .sm {
-    margin-top: 0;
-  }
-}
-
-@media (min-width: 1024px) {
-  .sm {
-    margin-top: 3em;
-  }
-}
-
-.sm .sm__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: auto;
-}
-
-.sm .sm__list #facebook, .sm .sm__list #instagram, .sm .sm__list #youtube, .sm .sm__list #twitter {
-  -webkit-transition: color .7s;
-  transition: color .7s;
-}
-
-.sm .sm__list #facebook:hover {
-  color: #3b5998;
-}
-
-.sm .sm__list #instagram:hover {
-  color: #e1306c;
-}
-
-.sm .sm__list #youtube:hover {
-  color: #ff0000;
-}
-
-.sm .sm__list #twitter:hover {
-  color: #1da1f2;
-}
-
 /*Acerca del juego*/
 @media (min-width: 1024px) {
   #adj .row {
@@ -375,6 +402,15 @@ ul.stars {
   font-size: 1.2rem;
 }
 
+/*colaboraciones*/
+#col li {
+  list-style: circle;
+}
+
+#col li span {
+  font-weight: bold;
+}
+
 /*ficha tecnica*/
 @media (min-width: 768px) {
   .table-fte ul {
@@ -396,13 +432,41 @@ ul.stars {
   }
 }
 
+.carousel-caption.mod-black {
+  -webkit-animation-name: appear;
+          animation-name: appear;
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+  -webkit-animation-duration: .5s;
+          animation-duration: .5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes appear {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 .grid-container {
   display: none;
 }
 
 @media (min-width: 1024px) {
   .grid-container {
-    width: 100%;
     height: 100vh;
     display: -ms-grid;
     display: grid;
@@ -412,12 +476,19 @@ ul.stars {
         grid-template-rows: 2fr 0.9fr 0.9fr 0.8fr 2fr;
         grid-template-areas: "iris cid cid cid ravus" "iris iedolas iedolas iedolas ravus" "cindy iedolas iedolas iedolas ravus" "cindy iedolas iedolas iedolas cor" "cindy aranea aranea aranea cor";
   }
+  .grid-container .mod-black {
+    display: none;
+    width: 100%;
+  }
   .grid-container .ravus {
     background: url(../img/ravus.jpg) 70%;
     -ms-grid-row: 1;
     -ms-grid-row-span: 3;
     -ms-grid-column: 5;
     grid-area: ravus;
+  }
+  .grid-container .ravus:hover .mod-black {
+    display: block;
   }
   .grid-container .cindy {
     background: url(../img/cindy.jpg) 50%;
@@ -426,12 +497,18 @@ ul.stars {
     -ms-grid-column: 1;
     grid-area: cindy;
   }
+  .grid-container .cindy:hover .mod-black {
+    display: block;
+  }
   .grid-container .cor {
     background: url(../img/cor.jpg) 70%;
     -ms-grid-row: 4;
     -ms-grid-row-span: 2;
     -ms-grid-column: 5;
     grid-area: cor;
+  }
+  .grid-container .cor:hover .mod-black {
+    display: block;
   }
   .grid-container .iedolas {
     background: url(../img/iedolas.jpg);
@@ -441,12 +518,18 @@ ul.stars {
     -ms-grid-column-span: 3;
     grid-area: iedolas;
   }
+  .grid-container .iedolas:hover .mod-black {
+    display: block;
+  }
   .grid-container .aranea {
     background: url(../img/aranea.jpg);
     -ms-grid-row: 5;
     -ms-grid-column: 2;
     -ms-grid-column-span: 3;
     grid-area: aranea;
+  }
+  .grid-container .aranea:hover .mod-black {
+    display: block;
   }
   .grid-container .iris {
     background: url(../img/iris.jpg) 60%;
@@ -455,12 +538,18 @@ ul.stars {
     -ms-grid-column: 1;
     grid-area: iris;
   }
+  .grid-container .iris:hover .mod-black {
+    display: block;
+  }
   .grid-container .cid {
     background: url(../img/cid.jpg);
     -ms-grid-row: 1;
     -ms-grid-column: 2;
     -ms-grid-column-span: 3;
     grid-area: cid;
+  }
+  .grid-container .cid:hover .mod-black {
+    display: block;
   }
   .grid-container .ravus, .grid-container .cindy, .grid-container .iris, .grid-container .cid, .grid-container .aranea, .grid-container .cor, .grid-container .iedolas {
     background-size: cover;
@@ -484,6 +573,21 @@ ul.stars {
         -ms-flex-direction: row-reverse;
             flex-direction: row-reverse;
   }
+}
+
+.carousel {
+  position: relative;
+}
+
+.carousel-caption {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 15px 10px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
 }
 
 #mus {

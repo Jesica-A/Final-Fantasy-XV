@@ -55,6 +55,12 @@ ul.stars {
   font-size: 1.2rem;
 }
 
+/*colaboraciones*/
+#col li {
+  list-style: circle;
+  span {font-weight: bold;}
+}
+
 /*ficha tecnica*/
 .table-fte {
   @media (min-width: 768px) {

@@ -77,6 +77,21 @@ ol li {
     padding: 0.1em 0.3em;
 }
 
+.carousel {
+    position: relative;
+  }
+  
+  .carousel-caption {
+    position: absolute;
+    background: rgba(0,0,0,0.4);
+    padding: 0.5em 1em;
+  }
+  
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 5%;
+  }
+
 /*nav y footer*/
 .bg-dark {background: #0f1117 !important;}
 
@@ -120,6 +135,42 @@ ol li {
     }
 }
 
+.mod-black {
+    background-color: $backgroundTransparent1;
+    padding: 1em;
+    margin-bottom: 1em;
+}
+
 section {margin-bottom: 3em;}
+
+.sm {
+  padding: 0 1em 1em 1em;
+  @media (min-width: 768px) {
+    margin-top: 0;
+  }
+  @media (min-width: 1024px) {
+    margin-top: 1em;
+  }
+  @media (min-width: 1200px) {
+    margin-top: 3em;
+  }
+
+  .sm__list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+
+    #facebook, #instagram, #youtube, #twitter {transition: color .7s;}
+
+    #facebook:hover {color: #3b5998;}
+
+    #instagram:hover {color: #e1306c;}
+
+    #youtube:hover {color: #ff0000;}
+
+    #twitter:hover {color: #1da1f2;}    
+  }
+}
 
 .sm, .container-index, #fte, #per, #gam {margin-bottom: 0;}

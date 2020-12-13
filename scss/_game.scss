@@ -1,7 +1,20 @@
+.carousel-caption.mod-black {
+  animation-name: appear;
+  animation-delay: 2.5s;
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
+}
+@keyframes appear {
+  0% {opacity: 1;}
+  100% {opacity: 0;}
+}
+
 .grid-container {
   display: none;
   @media (min-width: 1024px) {
-    width: 100%;
+    .mod-black {
+      display: none;width: 100%;
+    }
     height: 100vh;
     display: grid;
     grid-template-columns: 1.3fr 0.7fr 1fr 0.7fr 1.3fr;
@@ -11,36 +24,71 @@
     .ravus {
       background: url(../img/ravus.jpg) 70%;
       grid-area: ravus;
+      &:hover {
+        .mod-black {
+          display: block;
+        }
+      }
     }
   
     .cindy {
       background: url(../img/cindy.jpg) 50%;
       grid-area: cindy;
+      &:hover {
+        .mod-black {
+          display: block;
+        }
+      }
     }
   
     .cor {
       background: url(../img/cor.jpg) 70%;
       grid-area: cor;
+      &:hover {
+        .mod-black {
+          display: block;
+        }
+      }
     }
   
     .iedolas {
       background: url(../img/iedolas.jpg);
       grid-area: iedolas;
+      &:hover {
+        .mod-black {
+          display: block;
+        }
+      }
     }
   
     .aranea {
       background: url(../img/aranea.jpg);
       grid-area: aranea;
+      &:hover {
+        .mod-black {
+          display: block;
+        }
+      }
     }
   
     .iris {
       background: url(../img/iris.jpg) 60%;
       grid-area: iris;
+      &:hover {
+        .mod-black {
+          display: block;
+        }
+      }
     }
   
     .cid {
       background: url(../img/cid.jpg);
       grid-area: cid;
+      &:hover {
+        .mod-black {
+          display: block;
+        }
+      }
     }
   
     .ravus, .cindy, .iris, .cid, .aranea, .cor, .iedolas {
@@ -61,4 +109,19 @@
   #his .row, #cos .row{
     flex-direction: row-reverse;
   }
+}
+
+.carousel {
+  position: relative;
+}
+
+.carousel-caption {
+  position: absolute;
+  background: rgba(0,0,0,0.4);
+  padding: 15px 10px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
 }
