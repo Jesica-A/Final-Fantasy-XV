@@ -1,13 +1,11 @@
 
 .container-index {
-  background: url(../img/fondoindex.png) no-repeat 80%;
+  background: url(../img/fondoindex.jpg) no-repeat 80%;
   background-size: cover;
   text-align: center;
-  height: calc(100vh - 79px);
-  @media (min-width:768px) {
-    height: calc(100vh - 103px);
-  }
+  height: 100vh;
   @media (min-width: 1024px) {
+    height: calc(100vh - 124px);
     text-align: left;
     padding: 0 2em;
   }
@@ -32,7 +30,10 @@
     
         ul {display: flex;}
     
-        h3 {text-align: left;}
+        h3 {
+          text-align: left;
+          font-size: 1.5rem;
+        }
       }
 
     ul > * {margin-right: .7em;}
@@ -45,29 +46,3 @@
   }
 }
 
-.sm {
-  padding: 0 1em;
-  @media (min-width: 768px) {
-    margin-top: 0;
-  }
-  @media (min-width: 1024px) {
-    margin-top: 3em;
-  }
-
-  .sm__list {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: auto;
-
-    #facebook, #instagram, #youtube, #twitter {transition: color .7s;}
-
-    #facebook:hover {color: #3b5998;}
-
-    #instagram:hover {color: #e1306c;}
-
-    #youtube:hover {color: #ff0000;}
-
-    #twitter:hover {color: #1da1f2;}    
-  }
-}

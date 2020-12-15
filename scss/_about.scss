@@ -39,7 +39,7 @@
   }
 }
 
-#equ #carousel-example-2 {
+#equ #magicCarousel {
   @media (min-width: 768px){
     display: none;
   }
@@ -53,6 +53,16 @@
 ul.stars {
   @extend %display;
   font-size: 1.2rem;
+}
+
+ul.win {
+  display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+/*colaboraciones*/
+#col li {
+  list-style: circle;
+  span {font-weight: bold;}
 }
 
 /*ficha tecnica*/
