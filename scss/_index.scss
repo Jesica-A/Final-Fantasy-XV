@@ -4,10 +4,8 @@
   background-size: cover;
   text-align: center;
   height: 100vh;
-  @media (min-width: 400px) {
-    height: calc(100vh - 124px);
-  }
   @media (min-width: 1024px) {
+    height: calc(100vh - 124px);
     text-align: left;
     padding: 0 2em;
   }

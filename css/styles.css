@@ -141,8 +141,7 @@ ol li {
   }
 }
 
-.carousel-control-prev,
-.carousel-control-next {
+.carousel-control-prev, .carousel-control-next {
   width: 5%;
 }
 
@@ -187,12 +186,12 @@ ol li {
 }
 
 .container {
-  padding-bottom: 3em;
+  padding: 3em 0;
 }
 
 @media (min-width: 1024px) {
   .container {
-    max-width: 1340px;
+    max-width: 1300px;
   }
 }
 
@@ -219,35 +218,35 @@ section {
   margin-bottom: 3em;
 }
 
-.sm {
+.container-index__sm {
   padding: 0 1em 1em 1em;
 }
 
 @media (min-width: 400px) {
-  .sm {
+  .container-index__sm {
     margin-top: 0;
   }
 }
 
 @media (min-width: 768px) {
-  .sm {
+  .container-index__sm {
     margin-top: .5em;
   }
 }
 
 @media (min-width: 1024px) {
-  .sm {
+  .container-index__sm {
     margin-top: 1em;
   }
 }
 
 @media (min-width: 1200px) {
-  .sm {
-    margin-top: 3em;
+  .container-index__sm {
+    margin-top: 2em;
   }
 }
 
-.sm .sm__list {
+.container-index__sm .sm__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -259,32 +258,32 @@ section {
   margin: auto;
 }
 
-.sm .sm__list #facebook, .sm .sm__list #instagram, .sm .sm__list #youtube, .sm .sm__list #twitter, .sm .sm__list #linkedin {
+.container-index__sm .sm__list #facebook, .container-index__sm .sm__list #instagram, .container-index__sm .sm__list #youtube, .container-index__sm .sm__list #twitter, .container-index__sm .sm__list #linkedin {
   -webkit-transition: color .7s;
   transition: color .7s;
 }
 
-.sm .sm__list #facebook:hover {
+.container-index__sm .sm__list #facebook:hover {
   color: #3b5998;
 }
 
-.sm .sm__list #instagram:hover {
+.container-index__sm .sm__list #instagram:hover {
   color: #e1306c;
 }
 
-.sm .sm__list #youtube:hover {
+.container-index__sm .sm__list #youtube:hover {
   color: #ff0000;
 }
 
-.sm .sm__list #twitter:hover {
+.container-index__sm .sm__list #twitter:hover {
   color: #1da1f2;
 }
 
-.sm .sm__list #linkedin:hover {
+.container-index__sm .sm__list #linkedin:hover {
   color: #0e76a8;
 }
 
-.sm, .container-index, #fte, #per, #gam {
+.container-index, .container-index__sm, #fte, #per, #gam {
   margin-bottom: 0;
 }
 
@@ -320,14 +319,9 @@ section {
   height: 100vh;
 }
 
-@media (min-width: 400px) {
-  .container-index {
-    height: calc(100vh - 124px);
-  }
-}
-
 @media (min-width: 1024px) {
   .container-index {
+    height: calc(100vh - 124px);
     text-align: left;
     padding: 0 2em;
   }
@@ -681,8 +675,7 @@ ul.win li {
   padding: 15px 10px;
 }
 
-.carousel-control-prev,
-.carousel-control-next {
+.carousel-control-prev, .carousel-control-next {
   width: 5%;
 }
 
