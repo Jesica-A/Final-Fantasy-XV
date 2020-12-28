@@ -223,9 +223,15 @@ section {
   padding: 0 1em 1em 1em;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 400px) {
   .sm {
     margin-top: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .sm {
+    margin-top: .5em;
   }
 }
 
@@ -314,9 +320,14 @@ section {
   height: 100vh;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 400px) {
   .container-index {
     height: calc(100vh - 124px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-index {
     text-align: left;
     padding: 0 2em;
   }
@@ -329,6 +340,12 @@ section {
   padding: 1em 0;
   margin: 0;
   -webkit-text-stroke: 0.5px black;
+}
+
+@media (min-width: 400px) {
+  .container-index .grid-row h1 {
+    padding: 1.2em 0;
+  }
 }
 
 @media (min-width: 1024px) {

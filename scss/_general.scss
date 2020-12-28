@@ -140,7 +140,7 @@ ol {
     } 
 }
 
-.container{
+.container {
     padding-bottom: 3em;
     @media (min-width: 1024px) {
         max-width: 1340px;
@@ -165,8 +165,11 @@ section {margin-bottom: 3em;}
 
 .sm {
   padding: 0 1em 1em 1em;
+  @media (min-width: 400px) {
+      margin-top: 0;
+  }
   @media (min-width: 768px) {
-    margin-top: 0;
+    margin-top: .5em;
   }
   @media (min-width: 1024px) {
     margin-top: 1em;
