@@ -52,6 +52,13 @@ p {
 }
 
 .text {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-row-align: center;
+      align-self: center;
   padding: 2em;
 }
 
@@ -84,7 +91,7 @@ ol li {
 
 /*iconos e imagenes*/
 .iconify {
-  font-size: 2em;
+  font-size: 2.1rem;
   padding-right: .2em;
 }
 
@@ -100,7 +107,7 @@ ol li {
   background: rgba(0, 0, 0, 0.5);
   -webkit-box-shadow: inset 0 0 10px #2959b3;
           box-shadow: inset 0 0 10px #2959b3;
-  font-size: 1em;
+  font-size: 1rem;
   padding: .5em;
   border-radius: 50%;
 }
@@ -121,7 +128,17 @@ ol li {
 .carousel-caption {
   position: absolute;
   background: rgba(0, 0, 0, 0.4);
-  padding: 0.5em 1em;
+}
+
+.carousel-caption h3, .carousel-caption .h3-responsive, .carousel-caption p {
+  margin: 0;
+  font-size: .8rem;
+}
+
+@media (min-width: 425px) {
+  .carousel-caption h3, .carousel-caption .h3-responsive, .carousel-caption p {
+    font-size: 1.2rem;
+  }
 }
 
 .carousel-control-prev,
@@ -157,16 +174,20 @@ ol li {
 }
 
 @media (min-width: 768px) {
-  .back__cont h2 {
+  .back__cont .back__cont--animation h2 {
     width: 45%;
     text-align: left;
   }
 }
 
 @media (min-width: 1024px) {
-  .back__cont li {
+  .back__cont .back__cont--animation li {
     font-size: 1.6rem;
   }
+}
+
+.container {
+  padding-bottom: 3em;
 }
 
 @media (min-width: 1024px) {
@@ -232,7 +253,7 @@ section {
   margin: auto;
 }
 
-.sm .sm__list #facebook, .sm .sm__list #instagram, .sm .sm__list #youtube, .sm .sm__list #twitter {
+.sm .sm__list #facebook, .sm .sm__list #instagram, .sm .sm__list #youtube, .sm .sm__list #twitter, .sm .sm__list #linkedin {
   -webkit-transition: color .7s;
   transition: color .7s;
 }
@@ -253,20 +274,37 @@ section {
   color: #1da1f2;
 }
 
+.sm .sm__list #linkedin:hover {
+  color: #0e76a8;
+}
+
 .sm, .container-index, #fte, #per, #gam {
   margin-bottom: 0;
 }
 
-ul.stars, .back__contact form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.back__cont .back__cont--animation, .container-index .grid-row, .container-index .row {
+  -webkit-animation-name: fadeIn;
+          animation-name: fadeIn;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .container-index {
@@ -284,8 +322,8 @@ ul.stars, .back__contact form {
   }
 }
 
-.container-index h1 {
-  font-size: 2em;
+.container-index .grid-row h1 {
+  font-size: 2rem;
   -webkit-text-decoration: underline #f1f1f1;
           text-decoration: underline #f1f1f1;
   padding: 1em 0;
@@ -294,33 +332,33 @@ ul.stars, .back__contact form {
 }
 
 @media (min-width: 1024px) {
-  .container-index h1 {
-    font-size: 3em;
+  .container-index .grid-row h1 {
+    font-size: 3rem;
   }
 }
 
-.container-index .container-index__mod-black {
+.container-index .grid-row .container-index__mod-black {
   background-color: rgba(0, 0, 0, 0.5);
   padding: 1em;
   margin-bottom: 1em;
 }
 
 @media (min-width: 1024px) {
-  .container-index .container-index__mod-black {
+  .container-index .grid-row .container-index__mod-black {
     padding: 2em;
   }
-  .container-index .container-index__mod-black ul {
+  .container-index .grid-row .container-index__mod-black ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-  .container-index .container-index__mod-black h3 {
+  .container-index .grid-row .container-index__mod-black h3 {
     text-align: left;
     font-size: 1.5rem;
   }
 }
 
-.container-index .container-index__mod-black ul > * {
+.container-index .grid-row .container-index__mod-black ul > * {
   margin-right: .7em;
 }
 
@@ -341,7 +379,7 @@ ul.stars, .back__contact form {
 }
 
 /*expansiones*/
-#exp ul {
+#exp .container-album1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -352,8 +390,18 @@ ul.stars, .back__contact form {
           justify-content: space-evenly;
 }
 
-#exp ul li {
+#exp .container-album1 .album {
   padding: .7em 0;
+}
+
+#exp .container-album1 .album .album__button {
+  padding-top: .2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 /*equipo*/
@@ -399,14 +447,31 @@ ul.stars, .back__contact form {
 
 /*critica*/
 ul.stars {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 1.2rem;
 }
 
 ul.win {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (minmax(350px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+ul.win li {
+  padding: .7em 0;
 }
 
 /*colaboraciones*/
@@ -448,6 +513,13 @@ ul.win {
           animation-duration: .5s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+}
+
+@media (min-width: 768px) {
+  .carousel-caption.mod-black {
+    -webkit-animation-name: none;
+            animation-name: none;
+  }
 }
 
 @-webkit-keyframes appear {
@@ -601,7 +673,7 @@ ul.win {
   margin-top: 2em;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   #mus {
     margin-top: 0;
   }
@@ -618,6 +690,9 @@ ul.win {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .back__contact form label {

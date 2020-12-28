@@ -9,34 +9,41 @@
     text-align: left;
     padding: 0 2em;
   }
+  .grid-row {
+    @extend %animation;
 
-  h1 {
-    font-size: $title1Size;
-    text-decoration: underline $colorPrimary;
-    padding: 1em 0;
-    margin: 0;
-    -webkit-text-stroke: 0.5px rgb(0, 0, 0);
-    @media (min-width: 1024px) {
-      font-size: 3em;
+    h1 {
+      font-size: $title1Size;
+      text-decoration: underline $colorPrimary;
+      padding: 1em 0;
+      margin: 0;
+      -webkit-text-stroke: 0.5px rgb(0, 0, 0);
+      @media (min-width: 1024px) {
+        font-size: 3rem;
+      }
+    }
+  
+    .container-index__mod-black {
+      background-color: $backgroundTransparent1;
+      padding: 1em;
+      margin-bottom: 1em;
+      @media (min-width: 1024px) {
+          padding: 2em;
+      
+          ul {display: flex;}
+      
+          h3 {
+            text-align: left;
+            font-size: 1.5rem;
+          }
+        }
+  
+      ul > * {margin-right: .7em;}
     }
   }
 
-  .container-index__mod-black {
-    background-color: $backgroundTransparent1;
-    padding: 1em;
-    margin-bottom: 1em;
-    @media (min-width: 1024px) {
-        padding: 2em;
-    
-        ul {display: flex;}
-    
-        h3 {
-          text-align: left;
-          font-size: 1.5rem;
-        }
-      }
-
-    ul > * {margin-right: .7em;}
+  .row {
+    @extend %animation;
   }
 
   .btn:hover {

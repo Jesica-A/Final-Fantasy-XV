@@ -3,6 +3,9 @@
   animation-delay: 2.5s;
   animation-duration: .5s;
   animation-fill-mode: forwards;
+  @media (min-width: 768px){
+    animation-name: none;
+  }
 }
 @keyframes appear {
   0% {opacity: 1;}
@@ -13,7 +16,8 @@
   display: none;
   @media (min-width: 1024px) {
     .mod-black {
-      display: none;width: 100%;
+      display: none;
+      width: 100%;
     }
     height: 100vh;
     display: grid;
@@ -103,7 +107,11 @@
 }
 
 }
-#per h3 {margin-top: 1em;}
+#per {
+  h3 {
+    margin-top: 1em;
+  }
+}
 
 @media (min-width: 1024px) {
   #his .row, #cos .row{

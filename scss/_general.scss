@@ -24,7 +24,11 @@ h3 {
 
 p {line-height: 1.7em;}
 
-.text {padding: 2em;}
+.text {
+    display: grid;
+    justify-content: center;
+    align-self: center;
+    padding: 2em;}
 
 /*links*/
 a {
@@ -40,17 +44,23 @@ a {
 .active {color: $colorSecundary !important;}
 
 /*listas*/
-ul li {list-style: none;}
+ul {
+    li {
+        list-style: none;
+    }
+}
 
-ol li {
-    font-size: 1.3rem;
-    padding: .3em;
-    margin-left: 1.5em;
+ol {
+    li {
+        font-size: 1.3rem;
+        padding: .3em;
+        margin-left: 1.5em;
+    }
 }
 
 /*iconos e imagenes*/
-.iconify{
-    font-size: 2em;
+.iconify {
+    font-size: 2.1rem;
     padding-right: .2em;
 }
 
@@ -65,7 +75,7 @@ ol li {
     color: $colorShadow;
     background: $backgroundTransparent1;
     box-shadow: inset 0 0 10px $colorShadow;
-    font-size: 1em;
+    font-size: 1rem;
     padding: .5em;
     border-radius: 50%;
 
@@ -84,7 +94,13 @@ ol li {
   .carousel-caption {
     position: absolute;
     background: rgba(0,0,0,0.4);
-    padding: 0.5em 1em;
+    h3, .h3-responsive, p {
+        margin: 0;
+        font-size: .8rem;
+        @media (min-width: 425px) {
+            font-size: 1.2rem;
+        }
+    }
   }
   
   .carousel-control-prev,
@@ -107,21 +123,25 @@ ol li {
     background-size: cover;
     height: calc(100vh - 79px);
     padding: 3em;
-    h2 {
-        @media (min-width: 768px){
-            width: 45%;
-            text-align: left;
-        }    
-    }
-    li {
-        @media (min-width: 1024px){
-            font-size: 1.6rem ;
+    .back__cont--animation {
+        @extend %animation;
+        
+        h2 {
+            @media (min-width: 768px){
+                width: 45%;
+                text-align: left;
+            }    
         }
-    }
-    
+        li {
+            @media (min-width: 1024px){
+                font-size: 1.6rem ;
+            }
+        }
+    } 
 }
 
 .container{
+    padding-bottom: 3em;
     @media (min-width: 1024px) {
         max-width: 1340px;
     }
@@ -161,7 +181,7 @@ section {margin-bottom: 3em;}
     align-items: center;
     margin: auto;
 
-    #facebook, #instagram, #youtube, #twitter {transition: color .7s;}
+    #facebook, #instagram, #youtube, #twitter, #linkedin {transition: color .7s;}
 
     #facebook:hover {color: #3b5998;}
 
@@ -170,6 +190,8 @@ section {margin-bottom: 3em;}
     #youtube:hover {color: #ff0000;}
 
     #twitter:hover {color: #1da1f2;}    
+
+    #linkedin:hover {color: #0e76a8}
   }
 }
 

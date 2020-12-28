@@ -1,5 +1,15 @@
-%display {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+%animation {
+    animation-name: fadeIn;
+    animation-duration: 3s;
+    
+    @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+      
+        to {
+          opacity: 1;
+        }
+      }
 }

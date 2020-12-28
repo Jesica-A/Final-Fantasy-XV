@@ -1,17 +1,29 @@
 /*Acerca del juego*/
 @media (min-width: 1024px) {
-  #adj .row {
-    flex-direction:row-reverse;
+  #adj {
+    .row {
+      flex-direction:row-reverse;
+    }  
   }
 }
 
 /*expansiones*/
-#exp ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+#exp {
+  .container-album1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  
+    .album {
+      padding: .7em 0;
 
-  li {padding: .7em 0;}  
+      .album__button {
+        padding-top: .2em;
+        display: flex;
+        justify-content: center;
+      }
+    }  
+  }
 }
 
 /*equipo*/
@@ -46,23 +58,38 @@
 }
 
 @media (min-width: 1024px) {
-  #equ ul > * {padding: 0.3em;}
+  #equ {
+    ul > * {
+      padding: 0.3em;
+    }
+  }
 }
 
 /*critica*/
 ul.stars {
-  @extend %display;
+  display: flex;
+    justify-content: center;
+    align-items: center;
   font-size: 1.2rem;
 }
 
 ul.win {
-  display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    li {
+      padding: .7em 0;
+    }
 }
+
 /*colaboraciones*/
-#col li {
-  list-style: circle;
-  span {font-weight: bold;}
+#col {
+  li {
+    list-style: circle;
+    span {
+      font-weight: bold;
+    }
+  }
 }
 
 /*ficha tecnica*/
