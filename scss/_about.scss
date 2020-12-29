@@ -1,68 +1,95 @@
 /*Acerca del juego*/
 @media (min-width: 1024px) {
-  #adj .row {
-    flex-direction:row-reverse;
+  #adj {
+    .row {
+      flex-direction: row-reverse;
+    }
   }
 }
 
 /*expansiones*/
-#exp ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+#exp {
+  .container-album1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 
-  li {padding: .7em 0;}  
+    .album {
+      padding: 0.7em 0;
+
+      .album__button {
+        padding-top: 0.2em;
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
 }
 
 /*equipo*/
 .container-album {
   display: none;
-  @media (min-width: 768px){
+  @media (min-width: 768px) {
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    
+
     .album {
       margin: 1em;
       height: auto;
       text-align: center;
       box-shadow: inset 0 0 10px $colorShadow;
-        border-radius: .5em;
-  
+      border-radius: 0.5em;
+
       img {
         height: 200px;
         width: 90%;
-        margin-top: .5em;
-        border-radius: .5em;
+        margin-top: 0.5em;
+        border-radius: 0.5em;
       }
     }
   }
 }
 
 #equ #magicCarousel {
-  @media (min-width: 768px){
+  @media (min-width: 768px) {
     display: none;
   }
 }
 
 @media (min-width: 1024px) {
-  #equ ul > * {padding: 0.3em;}
+  #equ {
+    ul > * {
+      padding: 0.3em;
+    }
+  }
 }
 
 /*critica*/
 ul.stars {
-  @extend %display;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 1.2rem;
 }
 
 ul.win {
-  display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  li {
+    padding: 0.7em 0;
+  }
 }
+
 /*colaboraciones*/
-#col li {
-  list-style: circle;
-  span {font-weight: bold;}
+#col {
+  li {
+    list-style: circle;
+    span {
+      font-weight: bold;
+    }
+  }
 }
 
 /*ficha tecnica*/
@@ -78,6 +105,6 @@ ul.win {
     font-weight: bold;
     @media (min-width: 1024px) {
       width: 25%;
-    }  
+    }
   }
 }

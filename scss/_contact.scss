@@ -5,7 +5,7 @@
     margin: 1em auto 0;
     max-width: 400px;
     flex-direction: column;
-    @extend %display;
+    display: flex;
 
     label {
       align-self: flex-start;
@@ -17,34 +17,29 @@
         border: 3px $colorShadow solid;
       }
 
-      &[type=text], &[type=email] {
-        padding-left: .3em;
+      &[type="text"],
+      &[type="email"] {
+        padding-left: 0.3em;
         border: 3px transparent solid;
         background: $colorPrimary;
-        border-radius: .5em;
+        border-radius: 0.5em;
         margin-bottom: 1em;
       }
 
-      &[type=submit] {
-        font-weight: 600;
-        letter-spacing: .1em;
-        text-transform: uppercase;
-        border-radius: .5em;
-        padding: .4em 1em;
-        width: fit-content;
-        align-self: center;
-
+      &[type="submit"] {
+        @extend %button;
         &:hover {
-          background: $colorSecundary;
+          box-shadow: inset 0 0 8px $colorShadow;
+          color: $colorSecundary;
         }
-      }       
+      }
     }
 
     textarea {
-      padding-left: .3em;
+      padding-left: 0.3em;
       border: 3px transparent solid;
       background: $colorPrimary;
-      border-radius: .5em;
+      border-radius: 0.5em;
       margin-bottom: 1em;
       min-height: 100px;
       max-height: 190px;
@@ -54,5 +49,5 @@
         border: 3px $colorShadow solid;
       }
     }
-  }  
+  }
 }

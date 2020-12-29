@@ -1,5 +1,27 @@
-%display {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+%animation {
+  animation-name: fadeIn;
+  animation-duration: 3s;
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+%button {
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: 0.5em;
+  padding: 0.4em 1.5em;
+  width: fit-content;
+  align-self: center;
+  &:hover {
+    background: $backgroundTransparent2;
+  }
 }

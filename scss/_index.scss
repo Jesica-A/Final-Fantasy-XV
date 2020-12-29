@@ -1,4 +1,3 @@
-
 .container-index {
   background: url(../img/fondoindex.jpg) no-repeat 80%;
   background-size: cover;
@@ -9,40 +8,63 @@
     text-align: left;
     padding: 0 2em;
   }
+  .grid-row {
+    @extend %animation;
 
-  h1 {
-    font-size: $title1Size;
-    text-decoration: underline $colorPrimary;
-    padding: 1em 0;
-    margin: 0;
-    -webkit-text-stroke: 0.5px rgb(0, 0, 0);
-    @media (min-width: 1024px) {
-      font-size: 3em;
+    h1 {
+      font-size: $title1Size;
+      text-decoration: underline $colorPrimary;
+      padding: 1em 0;
+      margin: 0;
+      -webkit-text-stroke: 0.5px rgb(0, 0, 0);
+      @media (min-width: 400px) {
+        padding: 1.2em 0;
+      }
+      @media (min-width: 1024px) {
+        font-size: 3rem;
+      }
     }
-  }
 
-  .container-index__mod-black {
-    background-color: $backgroundTransparent1;
-    padding: 1em;
-    margin-bottom: 1em;
-    @media (min-width: 1024px) {
+    .container-index__mod-black {
+      background-color: $backgroundTransparent1;
+      padding: 1em;
+      margin-bottom: 1em;
+      @media (min-width: 1024px) {
         padding: 2em;
-    
-        ul {display: flex;}
-    
+
+        ul {
+          display: flex;
+        }
+
         h3 {
           text-align: left;
           font-size: 1.5rem;
         }
       }
 
-    ul > * {margin-right: .7em;}
+      ul > * {
+        margin-right: 0.7em;
+      }
+    }
   }
 
-  .btn:hover {
-    color: $colorSecundary;
-    border: 2px solid $colorSecundary;
-    background: transparent;
+  .row {
+    @extend %animation;
+  }
+
+  .container-index__sm {
+    padding: 0 1em 1em 1em;
+    @media (min-width: 400px) {
+      margin-top: 0;
+    }
+    @media (min-width: 768px) {
+      margin-top: 0.5em;
+    }
+    @media (min-width: 1024px) {
+      margin-top: 1em;
+    }
+    @media (min-width: 1200px) {
+      margin-top: 2em;
+    }
   }
 }
-
