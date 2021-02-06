@@ -430,7 +430,8 @@ section {
 }
 
 /*expansiones*/
-#exp .container-album1 {
+#exp .container-album1,
+.container__bmo .container-album1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -441,11 +442,13 @@ section {
           justify-content: space-evenly;
 }
 
-#exp .container-album1 .album {
+#exp .container-album1 .album,
+.container__bmo .container-album1 .album {
   padding: 0.7em 0;
 }
 
-#exp .container-album1 .album .album__button {
+#exp .container-album1 .album .album__button,
+.container__bmo .container-album1 .album .album__button {
   padding-top: 0.2em;
   display: -webkit-box;
   display: -ms-flexbox;
