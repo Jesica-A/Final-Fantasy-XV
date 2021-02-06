@@ -6,119 +6,106 @@ window.onload = function () {
     let $carrito = document.querySelector('#carrito');
     let $total = document.querySelector('#total');
     let $botonVaciar = document.querySelector('#boton-vaciar');
+    let $botonComprar = document.querySelector('#boton-comprar');
 
     // Funciones
     function renderItems() {
-        for (let info of baseDeDatos) {
-            // Estructura
-            let miNodo = document.createElement('div');
-            miNodo.classList.add( 'col-sm-6');
-            // Body
-            let miNodoCardBody = document.createElement('div');
-            miNodoCardBody.classList.add('card-body');
-            // Titulo
-            let miNodoTitle = document.createElement('h5');
-            miNodoTitle.classList.add('card-title');
-            miNodoTitle.textContent = info['name'];
-            // Imagen
-            let miNodoImagen = document.createElement('img');
-            miNodoImagen.classList.add('img-fluid');
-            miNodoImagen.setAttribute('src', info['img']);
-            // Precio
-            let miNodoPrecio = document.createElement('p');
-            miNodoPrecio.classList.add('card-text');
-            miNodoPrecio.textContent = '$' + info['price'];
-            // Boton 
-            let miNodoBoton = document.createElement('button');
-            miNodoBoton.classList.add('btn', 'btn-primary');
-            miNodoBoton.textContent = 'Comprar';
-            miNodoBoton.setAttribute('marcador', info['id']);
-            miNodoBoton.addEventListener('click', anyadirCarrito);
-            // Insertamos
-            miNodoCardBody.appendChild(miNodoImagen);
-            miNodoCardBody.appendChild(miNodoTitle);
-            miNodoCardBody.appendChild(miNodoPrecio);
-            miNodoCardBody.appendChild(miNodoBoton);
-            miNodo.appendChild(miNodoCardBody);
-            $items.appendChild(miNodo);
+        for (let info of products) {
+            let cItem = document.createElement('div');
+            cItem.classList.add( 'col-sm-6');
+
+            let cItemCardBody = document.createElement('div');
+            cItemCardBody.classList.add('card-body');
+
+            let cItemTitle = document.createElement('h5');
+            cItemTitle.classList.add('card-title');
+            cItemTitle.textContent = info['name'];
+
+            let cItemImagen = document.createElement('img');
+            cItemImagen.classList.add('img-fluid');
+            cItemImagen.setAttribute('src', info['img']);
+
+            let cItemPrecio = document.createElement('p');
+            cItemPrecio.classList.add('card-text');
+            cItemPrecio.textContent = '$' + info['price'];
+
+            let cItemBoton = document.createElement('button');
+            cItemBoton.classList.add('btn', 'btn-primary');
+            cItemBoton.textContent = 'Agregar';
+            cItemBoton.setAttribute('marcador', info['id']);
+            cItemBoton.addEventListener('click', agregarCarrito);
+
+            cItemCardBody.appendChild(cItemImagen);
+            cItemCardBody.appendChild(cItemTitle);
+            cItemCardBody.appendChild(cItemPrecio);
+            cItemCardBody.appendChild(cItemBoton);
+            cItem.appendChild(cItemCardBody);
+            $items.appendChild(cItem);
         }
     }
 
-    function anyadirCarrito () {
-        // Anyadimos el Nodo a nuestro carrito
+    function agregarCarrito () {
         carrito.push(this.getAttribute('marcador'))
-        // Calculo el total
+
         calcularTotal();
-        // Renderizamos el carrito 
         renderizarCarrito();
     }
 
     function renderizarCarrito() {
-        // Vaciamos todo el html
         $carrito.textContent = '';
-        // Quitamos los duplicados
         let carritoSinDuplicados = [...new Set(carrito)];
-        // Generamos los Nodos a partir de carrito
         carritoSinDuplicados.forEach(function (item, indice) {
-            // Obtenemos el item que necesitamos de la variable base de datos
-            let miItem = baseDeDatos.filter(function(itemBaseDatos) {
+            let miItem = products.filter(function(itemBaseDatos) {
                 return itemBaseDatos['id'] == item;
             });
-            // Cuenta el número de veces que se repite el producto
+
             let numeroUnidadesItem = carrito.reduce(function (total, itemId) {
                 return itemId === item ? total += 1 : total;
             }, 0);
-            // Creamos el nodo del item del carrito
-            let miNodo = document.createElement('li');
-            miNodo.classList.add('text-right', 'mx-2');
-            miNodo.textContent = `${numeroUnidadesItem} x ${miItem[0]['name']} - $${miItem[0]['price']}`;
-            // Boton de borrar
+
+            let cItem = document.createElement('li');
+            cItem.classList.add('text-right', 'mx-2');
+            cItem.textContent = `${numeroUnidadesItem} x ${miItem[0]['name']} - $${miItem[0]['price']}`;
+
             let miBoton = document.createElement('button');
             miBoton.classList.add('btn', 'btn-danger', 'mx-1');
             miBoton.textContent = 'X';
             miBoton.style.marginLeft = '1rem';
             miBoton.setAttribute('item', item);
             miBoton.addEventListener('click', borrarItemCarrito);
-            // Mezclamos nodos
-            miNodo.appendChild(miBoton);
-            $carrito.appendChild(miNodo);
+
+            cItem.appendChild(miBoton);
+            $carrito.appendChild(cItem);
         });
     }
 
     function borrarItemCarrito() {
-        // Obtenemos el producto ID que hay en el boton pulsado
         let id = this.getAttribute('item');
-        // Borramos todos los productos
         carrito = carrito.filter(function (carritoId) {
             return carritoId !== id;
         });
-        // volvemos a renderizar
+
         renderizarCarrito();
-        // Calculamos de nuevo el precio
         calcularTotal();
     }
 
     function calcularTotal() {
-        // Limpiamos precio anterior
         total = 0;
-        // Recorremos el array del carrito
         for (let item of carrito) {
-            // De cada elemento obtenemos su precio
-            let miItem = baseDeDatos.filter(function(itemBaseDatos) {
+            let miItem = products.filter(function(itemBaseDatos) {
                 return itemBaseDatos['id'] == item;
             });
             total = total + miItem[0]['price'];
         }
-        // Formateamos el total para que solo tenga dos decimales
+
         let totalDosDecimales = total.toFixed(2);
-        // Renderizamos el precio en el HTML
+
         $total.textContent = totalDosDecimales;
     }
 
     function vaciarCarrito() {
-        // Limpiamos los productos guardados
         carrito = [];
-        // Renderizamos los cambios
+
         renderizarCarrito();
         calcularTotal();
     }

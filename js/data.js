@@ -1,4 +1,4 @@
-const baseDeDatos = [{
+const products = [{
     "id" : "AAA001",
     "name" : "Noctis Lucis Caelum",
     "description" : "Figura coleccionable de Noctis",
